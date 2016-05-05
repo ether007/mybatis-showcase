@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+
+    <!--MyBatis 的运行时行为-->
+    <settings>
+        <setting name="cacheEnabled" value="true"/>
+        <setting name="logImpl" value="SLF4J"/>
+        <setting name="defaultStatementTimeout" value="25"/>
+        <setting name="defaultFetchSize" value="100"/>
+        <setting name="cacheEnabled" value="true"/>
+    </settings>
+
+    <!-- 别名 -->
+    <typeAliases>
+        <typeAlias alias="Author" type="org.xcl.model.Author"/>
+    </typeAliases>
+
+    <!--插件-->
+    <!--
+    指定数据库分页方言Dialect,
+    <plugins>
+        <plugin interceptor="com.asgard.cfap.plugin.dialect.interceptor.OffsetLimitInterceptor">
+            <property name="dialectClass" value="com.asgard.cfap.plugin.dialect.MySQLDialect"/>
+        </plugin>
+    </plugins>
+     -->
+
+</configuration>

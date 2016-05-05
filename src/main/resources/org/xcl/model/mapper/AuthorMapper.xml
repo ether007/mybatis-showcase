@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.xcl.dao.AuthorDao">
+
+    <insert id="save" useGeneratedKeys="true" keyProperty="id" parameterType="org.xcl.model.Author">
+    insert into Author(username,password,email,bio,favourite_section)
+    values(#{username},#{password},#{email},#{bio},#{favourite_section})
+    </insert>
+
+    <update id="update" parameterType="org.xcl.model.Author">
+         update Author set email=#{email} where id=#{id}
+    </update>
+
+    <delete id="delete">
+        delete from Author where id=#{id}
+    </delete>
+
+    <sql id="author_columns">
+        ${alias}.id,${alias}.username,${alias}.password,${alias}.email,${alias}.bio
+    </sql>
+
+
+    <select id="findById" resultType="org.xcl.model.Author">
+        select
+        <include refid="author_columns">
+            <property name="alias" value="author"></property>
+        </include>
+        from Author author
+        where id= #{id}
+    </select>
+
+    <select id="findAll" resultType="org.xcl.model.Author">
+        select
+        <include refid="author_columns">
+            <property name="alias" value="author"></property>
+        </include>
+        from Author author
+    </select>
+
+    <!--集合映射-->
+    <resultMap id="author_blog" type="org.xcl.model.Author">
+        <id property="id" column="a_id"/>
+        <result property="username" column="a_username"/>
+        <result property="password" column="a_password"/>
+        <result property="email" column="a_email"/>
+        <collection property="blogs" ofType="org.xcl.model.Blog">
+            <id property="id" column="b_id"></id>
+            <result property="author_id" column="b_authorid"></result>
+            <result property="title" column="b_title"></result>
+        </collection>
+    </resultMap>
+
+    <select id="authors" resultMap="author_blog">
+        select b.id b_id,b.author_id b_authorid ,b.title b_title,
+        a.id a_id, a.username a_username,a.email a_email
+        from Blog b left join Author a on b.author_id=a.id
+    </select>
+
+    <!--动态sql-->
+    <select id="dselect" resultType="org.xcl.model.Author" parameterType="org.xcl.model.Author">
+
+        select * from Author
+        <where>
+            <if test="id != null">
+                id=#{id}
+            </if>
+            <if test="username != null">
+                <bind name="pattern_username" value="'%' + username + '%'"/>
+                and username like #{pattern_username}
+            </if>
+        </where>
+    </select>
+
+    <update id="dupdate" parameterType="org.xcl.model.Author">
+        update Author
+        <set>
+            <if test="username != null">username=#{username},</if>
+            <if test="password != null">password=#{password},</if>
+            <if test="email != null">email=#{email},</if>
+            <if test="bio != null">bio=#{bio}</if>
+        </set>
+        where id=#{id}
+    </update>
+
+    <select id="selectAuthorIn" resultType="org.xcl.model.Author">
+        SELECT *
+        FROM Author a
+        WHERE id in
+        <foreach item="item" index="index" collection="list" open="(" separator="," close=")">
+            #{item}
+        </foreach>
+    </select>
+
+    <select id="selectAuthorOr" resultType="org.xcl.model.Author">
+        SELECT *
+        FROM Author a
+        <where>
+            <foreach item="item" index="index" collection="list" open=" " separator=" or " close=" ">
+                id = #{item}
+            </foreach>
+        </where>
+    </select>
+
+</mapper>

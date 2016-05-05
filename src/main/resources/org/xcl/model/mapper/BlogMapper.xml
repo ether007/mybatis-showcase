@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.xcl.dao.BlogDao">
+
+    <!--开启缓存,一级session级别,二级全局缓存-->
+    <cache eviction="FIFO"  flushInterval="60000" size="512" readOnly="true"/>
+
+    <insert id="save" useGeneratedKeys="true" keyProperty="id" parameterType="org.xcl.model.Blog">
+        insert into Blog(title,author_id) values(#{title},#{author_id})
+    </insert>
+
+    <select id="select" parameterType="long" resultType="org.xcl.model.Blog">
+        SELECT * FROM Blog WHERE id = #{id}
+    </select>
+
+    <!--多表查询映射-->
+    <resultMap id="blog_author" type="org.xcl.model.Blog">
+        <id property="id" column="b_id"></id>
+        <result property="author_id" column="b_authorid"></result>
+        <result property="title" column="b_title"></result>
+        <association property="author" javaType="org.xcl.model.Author">
+            <id property="id" column="a_id"/>
+            <result property="username" column="a_username"/>
+            <result property="password" column="a_password"/>
+            <result property="email" column="a_email"/>
+        </association>
+        <discriminator javaType="int" column="b_id">
+            <!--根据值映射不同的实现-->
+            <case value="1" resultType="org.xcl.model.XBlog"></case>
+        </discriminator>
+    </resultMap>
+
+    <select id="blogs" resultMap="blog_author">
+        select b.id b_id,b.author_id b_authorid ,b.title b_title,
+        a.id a_id, a.username a_username,a.email a_email
+        from Blog b left join Author a on b.author_id=a.id
+    </select>
+
+
+    <!--关联查询映射-->
+    <resultMap id="blog_association" type="org.xcl.model.Blog">
+        <association property="author" javaType="org.xcl.model.Author" column="author_id"
+                     select="org.xcl.dao.AuthorDao.findById"></association>
+    </resultMap>
+
+    <select id="selectBlog" parameterType="long" resultMap="blog_association">
+        SELECT * FROM Blog WHERE id = #{id}
+    </select>
+
+    <!--动态sql-->
+
+</mapper>
