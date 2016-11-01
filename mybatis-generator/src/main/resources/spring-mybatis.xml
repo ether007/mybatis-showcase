@@ -42,12 +42,12 @@
     <bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
         <property name="configLocation" value="classpath:mybatis-config.xml"/>
         <property name="dataSource" ref="dataSource"/>
-        <property name="mapperLocations" value="classpath*:org/xcl/**/mapper/*Mapper.xml"/>
+        <property name="mapperLocations" value="classpath*:com/jiuxing/drm/**/mapper/*Mapper.xml"/>
     </bean>
 
     <!--mybatis注解-->
     <bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
-        <property name="basePackage" value="org.xcl.dao"/>
+        <property name="basePackage" value="com.jiuxing.drm.dao"/>
         <property name="sqlSessionFactoryBeanName" value="sqlSessionFactory"/>
     </bean>
 
@@ -82,7 +82,7 @@
 
     <!-- Spring aop事务管理 -->
     <aop:config>
-        <aop:pointcut id="transactionPointcut" expression="execution(* org.xcl.service.impl.*Impl.*(..))"/>
+        <aop:pointcut id="transactionPointcut" expression="execution(* org.jiuxing.drm.service.impl.*Impl.*(..))"/>
         <aop:advisor pointcut-ref="transactionPointcut" advice-ref="transactionAdvice"/>
     </aop:config>
 

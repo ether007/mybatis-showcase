@@ -4,11 +4,12 @@
         "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
 <generatorConfiguration>
 
-    <context id="my" targetRuntime="MyBatis3">
+    <context id="my" targetRuntime="MyBatis3" defaultModelType="flat">
         <plugin type="org.mybatis.generator.plugins.SerializablePlugin" />
         <plugin type="org.mybatis.generator.plugins.CachePlugin" ></plugin>
         <plugin type="org.mybatis.generator.plugins.ToStringPlugin"/>
         <plugin type="org.mybatis.generator.plugins.EqualsHashCodePlugin"/>
+
         <plugin type="org.mybatis.generator.plugins.cust.PaginationPlugin" />
 
         <plugin type="org.mybatis.generator.plugins.RenameExampleClassPlugin">
@@ -22,7 +23,7 @@
         </commentGenerator>
 
         <jdbcConnection driverClass="com.mysql.jdbc.Driver"
-                        connectionURL="jdbc:mysql://dockerhost:3306/mybatis-case?characterEncoding=utf-8"
+                        connectionURL="jdbc:mysql://192.168.99.100/auth?user=root&amp;password=root&amp;useServerPrepStmts=false&amp;useUnicode=true&amp;characterEncoding=utf-8&amp;jdbcCompliantTruncation=false"
                         userId="root"
                         password="root"/>
 
@@ -32,31 +33,31 @@
         </javaTypeResolver>
 
         <!-- 生成model模型，对应的包，存放位置可以指定具体的路径,如/ProjectName/src，也可以使用MAVEN来自动生成 -->
-        <javaModelGenerator targetPackage="org.xcl.model"
+        <javaModelGenerator targetPackage="com.ace.entity"
                             targetProject="/Users/xcl/gitresp/mybatis-showcase/mybatis-generator/src/main/java">
             <property name="enableSubPackages" value="true"/>
             <property name="trimStrings" value="true"/>
         </javaModelGenerator>
 
         <!--对应的xml mapper文件  -->
-        <sqlMapGenerator targetPackage="org.xcl.model.mapper"
+        <sqlMapGenerator targetPackage="com.ace.mapper"
                          targetProject="/Users/xcl/gitresp/mybatis-showcase/mybatis-generator/src/main/resources">
             <property name="enableSubPackages" value="true"/>
         </sqlMapGenerator>
 
         <!-- 对应的dao接口 -->
-        <javaClientGenerator targetPackage="org.xcl.dao"
+        <javaClientGenerator targetPackage="com.ace.dao"
                              targetProject="/Users/xcl/gitresp/mybatis-showcase/mybatis-generator/src/main/java"
                              type="XMLMAPPER">
             <property name="enableSubPackages" value="true"/>
         </javaClientGenerator>
 
 
-        <table tableName="Author" schema="Author">
+        <table tableName="t_user" schema="User">
             <generatedKey column="id" sqlStatement="MySql"></generatedKey>
         </table>
 
-        <table tableName="Blog" schema="XBlog"></table>
+
 
     </context>
 </generatorConfiguration>

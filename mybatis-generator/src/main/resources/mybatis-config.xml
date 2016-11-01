@@ -15,7 +15,6 @@
 
     <!-- 别名 -->
     <typeAliases>
-        <typeAlias alias="Author" type="org.xcl.model.Author"/>
     </typeAliases>
 
 </configuration>

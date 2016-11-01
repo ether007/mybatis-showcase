@@ -29,7 +29,7 @@ public class PaginationPlugin extends PluginAdapter {
     }
 
     @Override
-    public boolean sqlMapSelectByExampleWithoutBLOBsElementGenerated(XmlElement element, IntrospectedTable introspectedTable) {
+    public boolean sqlMapSelectByExampleWithBLOBsElementGenerated(XmlElement element, IntrospectedTable introspectedTable) {
         XmlElement isNotNullElement = new XmlElement("if");
         isNotNullElement.addAttribute(new Attribute("test", "limitStart != -1 "));
         isNotNullElement.addElement(new TextElement("limit #{limitStart} , #{limitLength}"));
@@ -37,6 +37,12 @@ public class PaginationPlugin extends PluginAdapter {
         return super.sqlMapUpdateByExampleWithoutBLOBsElementGenerated(element,introspectedTable);
     }
 
+    /**
+     * Ìí¼Ó×Ö¶Î
+     * @param topLevelClass
+     * @param introspectedTable
+     * @param name
+     */
     private void addLimit(TopLevelClass topLevelClass,IntrospectedTable introspectedTable, String name) {
         CommentGenerator commentGenerator = context.getCommentGenerator();
         Field field = new Field();

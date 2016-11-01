@@ -1,0 +1,2426 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.jiuxing.drm.dao.VehicleOrderAdTmpMapper" >
+  <resultMap id="BaseResultMap" type="com.jiuxing.drm.model.VehicleOrderAdTmp" >
+    <id column="id" property="id" jdbcType="INTEGER" />
+    <result column="ad_id" property="adId" jdbcType="INTEGER" />
+    <result column="order_id" property="orderId" jdbcType="VARCHAR" />
+    <result column="ad_type" property="adType" jdbcType="TINYINT" />
+    <result column="user_id" property="userId" jdbcType="INTEGER" />
+    <result column="admin_id" property="adminId" jdbcType="VARCHAR" />
+    <result column="schedule_start_date" property="scheduleStartDate" jdbcType="DATE" />
+    <result column="schedule_end_date" property="scheduleEndDate" jdbcType="DATE" />
+    <result column="real_start_time" property="realStartTime" jdbcType="TIMESTAMP" />
+    <result column="real_end_time" property="realEndTime" jdbcType="TIMESTAMP" />
+    <result column="status" property="status" jdbcType="TINYINT" />
+    <result column="smallpic_url" property="smallpicUrl" jdbcType="VARCHAR" />
+    <result column="brand_id" property="brandId" jdbcType="SMALLINT" />
+    <result column="model_id" property="modelId" jdbcType="SMALLINT" />
+    <result column="modelchild_id" property="modelchildId" jdbcType="SMALLINT" />
+    <result column="nation" property="nation" jdbcType="TINYINT" />
+    <result column="type" property="type" jdbcType="TINYINT" />
+    <result column="type_ext" property="typeExt" jdbcType="TINYINT" />
+    <result column="other_brand_name" property="otherBrandName" jdbcType="VARCHAR" />
+    <result column="other_model_name" property="otherModelName" jdbcType="VARCHAR" />
+    <result column="province_id" property="provinceId" jdbcType="CHAR" />
+    <result column="zone_id" property="zoneId" jdbcType="SMALLINT" />
+    <result column="markprovince_id" property="markprovinceId" jdbcType="CHAR" />
+    <result column="markzone_id" property="markzoneId" jdbcType="SMALLINT" />
+    <result column="buy_year" property="buyYear" jdbcType="SMALLINT" />
+    <result column="buy_month" property="buyMonth" jdbcType="TINYINT" />
+    <result column="buy_day" property="buyDay" jdbcType="TINYINT" />
+    <result column="reg_year" property="regYear" jdbcType="SMALLINT" />
+    <result column="reg_month" property="regMonth" jdbcType="TINYINT" />
+    <result column="reg_day" property="regDay" jdbcType="TINYINT" />
+    <result column="dealzone_id" property="dealzoneId" jdbcType="SMALLINT" />
+    <result column="validdays" property="validdays" jdbcType="INTEGER" />
+    <result column="gearbox" property="gearbox" jdbcType="TINYINT" />
+    <result column="air" property="air" jdbcType="TINYINT" />
+    <result column="cylinder" property="cylinder" jdbcType="TINYINT" />
+    <result column="seating" property="seating" jdbcType="SMALLINT" />
+    <result column="loads" property="loads" jdbcType="VARCHAR" />
+    <result column="airdisplacement" property="airdisplacement" jdbcType="VARCHAR" />
+    <result column="qhcp" property="qhcp" jdbcType="TINYINT" />
+    <result column="driving_license" property="drivingLicense" jdbcType="TINYINT" />
+    <result column="invoice" property="invoice" jdbcType="TINYINT" />
+    <result column="surtax" property="surtax" jdbcType="TINYINT" />
+    <result column="roadtoll_year" property="roadtollYear" jdbcType="SMALLINT" />
+    <result column="roadtoll_month" property="roadtollMonth" jdbcType="TINYINT" />
+    <result column="usetax_year" property="usetaxYear" jdbcType="SMALLINT" />
+    <result column="usetax_month" property="usetaxMonth" jdbcType="TINYINT" />
+    <result column="insurance_year" property="insuranceYear" jdbcType="SMALLINT" />
+    <result column="insurance_month" property="insuranceMonth" jdbcType="TINYINT" />
+    <result column="mot_year" property="motYear" jdbcType="SMALLINT" />
+    <result column="mot_month" property="motMonth" jdbcType="TINYINT" />
+    <result column="instalment" property="instalment" jdbcType="TINYINT" />
+    <result column="config" property="config" jdbcType="VARCHAR" />
+    <result column="color" property="color" jdbcType="TINYINT" />
+    <result column="colour" property="colour" jdbcType="VARCHAR" />
+    <result column="distance" property="distance" jdbcType="INTEGER" />
+    <result column="registration_mark" property="registrationMark" jdbcType="TINYINT" />
+    <result column="price" property="price" jdbcType="INTEGER" />
+    <result column="contactman" property="contactman" jdbcType="VARCHAR" />
+    <result column="telephone" property="telephone" jdbcType="VARCHAR" />
+    <result column="collector_admin_id" property="collectorAdminId" jdbcType="VARCHAR" />
+    <result column="record_time" property="recordTime" jdbcType="TIMESTAMP" />
+    <result column="status_admin_id" property="statusAdminId" jdbcType="VARCHAR" />
+    <result column="status_time" property="statusTime" jdbcType="TIMESTAMP" />
+    <result column="company_branch_id" property="companyBranchId" jdbcType="TINYINT" />
+    <result column="collection_id" property="collectionId" jdbcType="VARCHAR" />
+    <result column="license_number" property="licenseNumber" jdbcType="VARCHAR" />
+    <result column="combo" property="combo" jdbcType="TINYINT" />
+    <result column="level" property="level" jdbcType="TINYINT" />
+    <result column="priority" property="priority" jdbcType="TINYINT" />
+    <result column="vin" property="vin" jdbcType="VARCHAR" />
+    <result column="rank" property="rank" jdbcType="INTEGER" />
+    <result column="vehicle_condition" property="vehicleCondition" jdbcType="INTEGER" />
+    <result column="vctypebelong" property="vctypebelong" jdbcType="INTEGER" />
+    <result column="rb_makecode" property="rbMakecode" jdbcType="VARCHAR" />
+    <result column="rb_family" property="rbFamily" jdbcType="VARCHAR" />
+    <result column="rb_year" property="rbYear" jdbcType="VARCHAR" />
+    <result column="rb_vehiclekey" property="rbVehiclekey" jdbcType="VARCHAR" />
+    <result column="qa" property="qa" jdbcType="VARCHAR" />
+    <result column="authcode" property="authcode" jdbcType="VARCHAR" />
+    <result column="isqa" property="isqa" jdbcType="INTEGER" />
+    <result column="qasn" property="qasn" jdbcType="VARCHAR" />
+    <result column="pay_way" property="payWay" jdbcType="TINYINT" />
+    <result column="price_type" property="priceType" jdbcType="TINYINT" />
+    <result column="is_crest" property="isCrest" jdbcType="TINYINT" />
+    <result column="crest_create_time" property="crestCreateTime" jdbcType="TIMESTAMP" />
+    <result column="crest_start_time" property="crestStartTime" jdbcType="TIMESTAMP" />
+    <result column="crest_end_time" property="crestEndTime" jdbcType="TIMESTAMP" />
+    <result column="crest_status" property="crestStatus" jdbcType="TINYINT" />
+    <result column="has_background" property="hasBackground" jdbcType="TINYINT" />
+    <result column="background_create_time" property="backgroundCreateTime" jdbcType="TIMESTAMP" />
+    <result column="background_start_time" property="backgroundStartTime" jdbcType="TIMESTAMP" />
+    <result column="background_end_time" property="backgroundEndTime" jdbcType="TIMESTAMP" />
+    <result column="background_status" property="backgroundStatus" jdbcType="TINYINT" />
+    <result column="promotion_state" property="promotionState" jdbcType="INTEGER" />
+    <result column="consume_status" property="consumeStatus" jdbcType="TINYINT" />
+    <result column="category" property="category" jdbcType="VARCHAR" />
+    <result column="fuel_type" property="fuelType" jdbcType="INTEGER" />
+    <result column="inner_color" property="innerColor" jdbcType="INTEGER" />
+    <result column="engine_size" property="engineSize" jdbcType="INTEGER" />
+    <result column="md5code" property="md5code" jdbcType="CHAR" />
+    <result column="brand" property="brand" jdbcType="VARCHAR" />
+    <result column="county_id" property="countyId" jdbcType="SMALLINT" />
+    <result column="markcounty_id" property="markcountyId" jdbcType="SMALLINT" />
+    <result column="sex" property="sex" jdbcType="INTEGER" />
+    <result column="email" property="email" jdbcType="VARCHAR" />
+    <result column="usages" property="usages" jdbcType="INTEGER" />
+    <result column="repair_recorder" property="repairRecorder" jdbcType="TINYINT" />
+    <result column="credit" property="credit" jdbcType="BIT" />
+    <result column="score" property="score" jdbcType="SMALLINT" />
+    <result column="iscore" property="iscore" jdbcType="INTEGER" />
+    <result column="transfer" property="transfer" jdbcType="TINYINT" />
+    <result column="service" property="service" jdbcType="VARCHAR" />
+    <result column="substatus" property="substatus" jdbcType="TINYINT" />
+    <result column="bargains_status" property="bargainsStatus" jdbcType="TINYINT" />
+    <result column="body_style" property="bodyStyle" jdbcType="TINYINT" />
+    <result column="drive_type" property="driveType" jdbcType="TINYINT" />
+    <result column="badge" property="badge" jdbcType="VARCHAR" />
+    <result column="make_year" property="makeYear" jdbcType="SMALLINT" />
+    <result column="service_count" property="serviceCount" jdbcType="TINYINT" />
+    <result column="selling_point" property="sellingPoint" jdbcType="VARCHAR" />
+    <result column="emission_standard_id" property="emissionStandardId" jdbcType="TINYINT" />
+    <result column="servicebit" property="servicebit" jdbcType="INTEGER" />
+    <result column="sales_id" property="salesId" jdbcType="INTEGER" />
+    <result column="custom_code" property="customCode" jdbcType="VARCHAR" />
+  </resultMap>
+  <resultMap id="ResultMapWithBLOBs" type="com.jiuxing.drm.model.VehicleOrderAdTmp" extends="BaseResultMap" >
+    <result column="picture_urls" property="pictureUrls" jdbcType="LONGVARCHAR" />
+    <result column="description" property="description" jdbcType="LONGVARCHAR" />
+    <result column="invoice_number" property="invoiceNumber" jdbcType="LONGVARCHAR" />
+  </resultMap>
+  <sql id="Example_Where_Clause" >
+    <where >
+      <foreach collection="oredCriteria" item="criteria" separator="or" >
+        <if test="criteria.valid" >
+          <trim prefix="(" suffix=")" prefixOverrides="and" >
+            <foreach collection="criteria.criteria" item="criterion" >
+              <choose >
+                <when test="criterion.noValue" >
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue" >
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue" >
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue" >
+                  and ${criterion.condition}
+                  <foreach collection="criterion.value" item="listItem" open="(" close=")" separator="," >
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Update_By_Example_Where_Clause" >
+    <where >
+      <foreach collection="example.oredCriteria" item="criteria" separator="or" >
+        <if test="criteria.valid" >
+          <trim prefix="(" suffix=")" prefixOverrides="and" >
+            <foreach collection="criteria.criteria" item="criterion" >
+              <choose >
+                <when test="criterion.noValue" >
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue" >
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue" >
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue" >
+                  and ${criterion.condition}
+                  <foreach collection="criterion.value" item="listItem" open="(" close=")" separator="," >
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Base_Column_List" >
+    id, ad_id, order_id, ad_type, user_id, admin_id, schedule_start_date, schedule_end_date, 
+    real_start_time, real_end_time, status, smallpic_url, brand_id, model_id, modelchild_id, 
+    nation, type, type_ext, other_brand_name, other_model_name, province_id, zone_id, 
+    markprovince_id, markzone_id, buy_year, buy_month, buy_day, reg_year, reg_month, 
+    reg_day, dealzone_id, validdays, gearbox, air, cylinder, seating, loads, airdisplacement, 
+    qhcp, driving_license, invoice, surtax, roadtoll_year, roadtoll_month, usetax_year, 
+    usetax_month, insurance_year, insurance_month, mot_year, mot_month, instalment, config, 
+    color, colour, distance, registration_mark, price, contactman, telephone, collector_admin_id, 
+    record_time, status_admin_id, status_time, company_branch_id, collection_id, license_number, 
+    combo, level, priority, vin, rank, vehicle_condition, vctypebelong, rb_makecode, 
+    rb_family, rb_year, rb_vehiclekey, qa, authcode, isqa, qasn, pay_way, price_type, 
+    is_crest, crest_create_time, crest_start_time, crest_end_time, crest_status, has_background, 
+    background_create_time, background_start_time, background_end_time, background_status, 
+    promotion_state, consume_status, category, fuel_type, inner_color, engine_size, md5code, 
+    brand, county_id, markcounty_id, sex, email, usages, repair_recorder, credit, score, 
+    iscore, transfer, service, substatus, bargains_status, body_style, drive_type, badge, 
+    make_year, service_count, selling_point, emission_standard_id, servicebit, sales_id, 
+    custom_code
+  </sql>
+  <sql id="Blob_Column_List" >
+    picture_urls, description, invoice_number
+  </sql>
+  <select id="selectByExampleWithBLOBs" resultMap="ResultMapWithBLOBs" parameterType="com.jiuxing.drm.model.VehicleOrderAdTmpCriteria" >
+    select
+    <if test="distinct" >
+      distinct
+    </if>
+    <include refid="Base_Column_List" />
+    ,
+    <include refid="Blob_Column_List" />
+    from vehicle_order_ad_tmp
+    <if test="_parameter != null" >
+      <include refid="Example_Where_Clause" />
+    </if>
+    <if test="orderByClause != null" >
+      order by ${orderByClause}
+    </if>
+  </select>
+  <select id="selectByExample" resultMap="BaseResultMap" parameterType="com.jiuxing.drm.model.VehicleOrderAdTmpCriteria" >
+    select
+    <if test="distinct" >
+      distinct
+    </if>
+    <include refid="Base_Column_List" />
+    from vehicle_order_ad_tmp
+    <if test="_parameter != null" >
+      <include refid="Example_Where_Clause" />
+    </if>
+    <if test="orderByClause != null" >
+      order by ${orderByClause}
+    </if>
+    <if test="limitStart != -1 " >
+      limit #{limitStart} , #{limitLength}
+    </if>
+  </select>
+  <select id="selectByPrimaryKey" resultMap="ResultMapWithBLOBs" parameterType="java.lang.Integer" >
+    select 
+    <include refid="Base_Column_List" />
+    ,
+    <include refid="Blob_Column_List" />
+    from vehicle_order_ad_tmp
+    where id = #{id,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
+    delete from vehicle_order_ad_tmp
+    where id = #{id,jdbcType=INTEGER}
+  </delete>
+  <delete id="deleteByExample" parameterType="com.jiuxing.drm.model.VehicleOrderAdTmpCriteria" >
+    delete from vehicle_order_ad_tmp
+    <if test="_parameter != null" >
+      <include refid="Example_Where_Clause" />
+    </if>
+  </delete>
+  <insert id="insert" parameterType="com.jiuxing.drm.model.VehicleOrderAdTmp" >
+    <selectKey resultType="java.lang.Integer" keyProperty="id" order="BEFORE" >
+      SELECT LAST_INSERT_ID()
+    </selectKey>
+    insert into vehicle_order_ad_tmp (id, ad_id, order_id, 
+      ad_type, user_id, admin_id, 
+      schedule_start_date, schedule_end_date, real_start_time, 
+      real_end_time, status, smallpic_url, 
+      brand_id, model_id, modelchild_id, 
+      nation, type, type_ext, 
+      other_brand_name, other_model_name, province_id, 
+      zone_id, markprovince_id, markzone_id, 
+      buy_year, buy_month, buy_day, 
+      reg_year, reg_month, reg_day, 
+      dealzone_id, validdays, gearbox, 
+      air, cylinder, seating, 
+      loads, airdisplacement, qhcp, 
+      driving_license, invoice, surtax, 
+      roadtoll_year, roadtoll_month, usetax_year, 
+      usetax_month, insurance_year, insurance_month, 
+      mot_year, mot_month, instalment, 
+      config, color, colour, 
+      distance, registration_mark, price, 
+      contactman, telephone, collector_admin_id, 
+      record_time, status_admin_id, status_time, 
+      company_branch_id, collection_id, license_number, 
+      combo, level, priority, 
+      vin, rank, vehicle_condition, 
+      vctypebelong, rb_makecode, rb_family, 
+      rb_year, rb_vehiclekey, qa, 
+      authcode, isqa, qasn, 
+      pay_way, price_type, is_crest, 
+      crest_create_time, crest_start_time, crest_end_time, 
+      crest_status, has_background, background_create_time, 
+      background_start_time, background_end_time, 
+      background_status, promotion_state, consume_status, 
+      category, fuel_type, inner_color, 
+      engine_size, md5code, brand, 
+      county_id, markcounty_id, sex, 
+      email, usages, repair_recorder, 
+      credit, score, iscore, 
+      transfer, service, substatus, 
+      bargains_status, body_style, drive_type, 
+      badge, make_year, service_count, 
+      selling_point, emission_standard_id, servicebit, 
+      sales_id, custom_code, picture_urls, 
+      description, invoice_number)
+    values (#{id,jdbcType=INTEGER}, #{adId,jdbcType=INTEGER}, #{orderId,jdbcType=VARCHAR}, 
+      #{adType,jdbcType=TINYINT}, #{userId,jdbcType=INTEGER}, #{adminId,jdbcType=VARCHAR}, 
+      #{scheduleStartDate,jdbcType=DATE}, #{scheduleEndDate,jdbcType=DATE}, #{realStartTime,jdbcType=TIMESTAMP}, 
+      #{realEndTime,jdbcType=TIMESTAMP}, #{status,jdbcType=TINYINT}, #{smallpicUrl,jdbcType=VARCHAR}, 
+      #{brandId,jdbcType=SMALLINT}, #{modelId,jdbcType=SMALLINT}, #{modelchildId,jdbcType=SMALLINT}, 
+      #{nation,jdbcType=TINYINT}, #{type,jdbcType=TINYINT}, #{typeExt,jdbcType=TINYINT}, 
+      #{otherBrandName,jdbcType=VARCHAR}, #{otherModelName,jdbcType=VARCHAR}, #{provinceId,jdbcType=CHAR}, 
+      #{zoneId,jdbcType=SMALLINT}, #{markprovinceId,jdbcType=CHAR}, #{markzoneId,jdbcType=SMALLINT}, 
+      #{buyYear,jdbcType=SMALLINT}, #{buyMonth,jdbcType=TINYINT}, #{buyDay,jdbcType=TINYINT}, 
+      #{regYear,jdbcType=SMALLINT}, #{regMonth,jdbcType=TINYINT}, #{regDay,jdbcType=TINYINT}, 
+      #{dealzoneId,jdbcType=SMALLINT}, #{validdays,jdbcType=INTEGER}, #{gearbox,jdbcType=TINYINT}, 
+      #{air,jdbcType=TINYINT}, #{cylinder,jdbcType=TINYINT}, #{seating,jdbcType=SMALLINT}, 
+      #{loads,jdbcType=VARCHAR}, #{airdisplacement,jdbcType=VARCHAR}, #{qhcp,jdbcType=TINYINT}, 
+      #{drivingLicense,jdbcType=TINYINT}, #{invoice,jdbcType=TINYINT}, #{surtax,jdbcType=TINYINT}, 
+      #{roadtollYear,jdbcType=SMALLINT}, #{roadtollMonth,jdbcType=TINYINT}, #{usetaxYear,jdbcType=SMALLINT}, 
+      #{usetaxMonth,jdbcType=TINYINT}, #{insuranceYear,jdbcType=SMALLINT}, #{insuranceMonth,jdbcType=TINYINT}, 
+      #{motYear,jdbcType=SMALLINT}, #{motMonth,jdbcType=TINYINT}, #{instalment,jdbcType=TINYINT}, 
+      #{config,jdbcType=VARCHAR}, #{color,jdbcType=TINYINT}, #{colour,jdbcType=VARCHAR}, 
+      #{distance,jdbcType=INTEGER}, #{registrationMark,jdbcType=TINYINT}, #{price,jdbcType=INTEGER}, 
+      #{contactman,jdbcType=VARCHAR}, #{telephone,jdbcType=VARCHAR}, #{collectorAdminId,jdbcType=VARCHAR}, 
+      #{recordTime,jdbcType=TIMESTAMP}, #{statusAdminId,jdbcType=VARCHAR}, #{statusTime,jdbcType=TIMESTAMP}, 
+      #{companyBranchId,jdbcType=TINYINT}, #{collectionId,jdbcType=VARCHAR}, #{licenseNumber,jdbcType=VARCHAR}, 
+      #{combo,jdbcType=TINYINT}, #{level,jdbcType=TINYINT}, #{priority,jdbcType=TINYINT}, 
+      #{vin,jdbcType=VARCHAR}, #{rank,jdbcType=INTEGER}, #{vehicleCondition,jdbcType=INTEGER}, 
+      #{vctypebelong,jdbcType=INTEGER}, #{rbMakecode,jdbcType=VARCHAR}, #{rbFamily,jdbcType=VARCHAR}, 
+      #{rbYear,jdbcType=VARCHAR}, #{rbVehiclekey,jdbcType=VARCHAR}, #{qa,jdbcType=VARCHAR}, 
+      #{authcode,jdbcType=VARCHAR}, #{isqa,jdbcType=INTEGER}, #{qasn,jdbcType=VARCHAR}, 
+      #{payWay,jdbcType=TINYINT}, #{priceType,jdbcType=TINYINT}, #{isCrest,jdbcType=TINYINT}, 
+      #{crestCreateTime,jdbcType=TIMESTAMP}, #{crestStartTime,jdbcType=TIMESTAMP}, #{crestEndTime,jdbcType=TIMESTAMP}, 
+      #{crestStatus,jdbcType=TINYINT}, #{hasBackground,jdbcType=TINYINT}, #{backgroundCreateTime,jdbcType=TIMESTAMP}, 
+      #{backgroundStartTime,jdbcType=TIMESTAMP}, #{backgroundEndTime,jdbcType=TIMESTAMP}, 
+      #{backgroundStatus,jdbcType=TINYINT}, #{promotionState,jdbcType=INTEGER}, #{consumeStatus,jdbcType=TINYINT}, 
+      #{category,jdbcType=VARCHAR}, #{fuelType,jdbcType=INTEGER}, #{innerColor,jdbcType=INTEGER}, 
+      #{engineSize,jdbcType=INTEGER}, #{md5code,jdbcType=CHAR}, #{brand,jdbcType=VARCHAR}, 
+      #{countyId,jdbcType=SMALLINT}, #{markcountyId,jdbcType=SMALLINT}, #{sex,jdbcType=INTEGER}, 
+      #{email,jdbcType=VARCHAR}, #{usages,jdbcType=INTEGER}, #{repairRecorder,jdbcType=TINYINT}, 
+      #{credit,jdbcType=BIT}, #{score,jdbcType=SMALLINT}, #{iscore,jdbcType=INTEGER}, 
+      #{transfer,jdbcType=TINYINT}, #{service,jdbcType=VARCHAR}, #{substatus,jdbcType=TINYINT}, 
+      #{bargainsStatus,jdbcType=TINYINT}, #{bodyStyle,jdbcType=TINYINT}, #{driveType,jdbcType=TINYINT}, 
+      #{badge,jdbcType=VARCHAR}, #{makeYear,jdbcType=SMALLINT}, #{serviceCount,jdbcType=TINYINT}, 
+      #{sellingPoint,jdbcType=VARCHAR}, #{emissionStandardId,jdbcType=TINYINT}, #{servicebit,jdbcType=INTEGER}, 
+      #{salesId,jdbcType=INTEGER}, #{customCode,jdbcType=VARCHAR}, #{pictureUrls,jdbcType=LONGVARCHAR}, 
+      #{description,jdbcType=LONGVARCHAR}, #{invoiceNumber,jdbcType=LONGVARCHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="com.jiuxing.drm.model.VehicleOrderAdTmp" >
+    <selectKey resultType="java.lang.Integer" keyProperty="id" order="BEFORE" >
+      SELECT LAST_INSERT_ID()
+    </selectKey>
+    insert into vehicle_order_ad_tmp
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      id,
+      <if test="adId != null" >
+        ad_id,
+      </if>
+      <if test="orderId != null" >
+        order_id,
+      </if>
+      <if test="adType != null" >
+        ad_type,
+      </if>
+      <if test="userId != null" >
+        user_id,
+      </if>
+      <if test="adminId != null" >
+        admin_id,
+      </if>
+      <if test="scheduleStartDate != null" >
+        schedule_start_date,
+      </if>
+      <if test="scheduleEndDate != null" >
+        schedule_end_date,
+      </if>
+      <if test="realStartTime != null" >
+        real_start_time,
+      </if>
+      <if test="realEndTime != null" >
+        real_end_time,
+      </if>
+      <if test="status != null" >
+        status,
+      </if>
+      <if test="smallpicUrl != null" >
+        smallpic_url,
+      </if>
+      <if test="brandId != null" >
+        brand_id,
+      </if>
+      <if test="modelId != null" >
+        model_id,
+      </if>
+      <if test="modelchildId != null" >
+        modelchild_id,
+      </if>
+      <if test="nation != null" >
+        nation,
+      </if>
+      <if test="type != null" >
+        type,
+      </if>
+      <if test="typeExt != null" >
+        type_ext,
+      </if>
+      <if test="otherBrandName != null" >
+        other_brand_name,
+      </if>
+      <if test="otherModelName != null" >
+        other_model_name,
+      </if>
+      <if test="provinceId != null" >
+        province_id,
+      </if>
+      <if test="zoneId != null" >
+        zone_id,
+      </if>
+      <if test="markprovinceId != null" >
+        markprovince_id,
+      </if>
+      <if test="markzoneId != null" >
+        markzone_id,
+      </if>
+      <if test="buyYear != null" >
+        buy_year,
+      </if>
+      <if test="buyMonth != null" >
+        buy_month,
+      </if>
+      <if test="buyDay != null" >
+        buy_day,
+      </if>
+      <if test="regYear != null" >
+        reg_year,
+      </if>
+      <if test="regMonth != null" >
+        reg_month,
+      </if>
+      <if test="regDay != null" >
+        reg_day,
+      </if>
+      <if test="dealzoneId != null" >
+        dealzone_id,
+      </if>
+      <if test="validdays != null" >
+        validdays,
+      </if>
+      <if test="gearbox != null" >
+        gearbox,
+      </if>
+      <if test="air != null" >
+        air,
+      </if>
+      <if test="cylinder != null" >
+        cylinder,
+      </if>
+      <if test="seating != null" >
+        seating,
+      </if>
+      <if test="loads != null" >
+        loads,
+      </if>
+      <if test="airdisplacement != null" >
+        airdisplacement,
+      </if>
+      <if test="qhcp != null" >
+        qhcp,
+      </if>
+      <if test="drivingLicense != null" >
+        driving_license,
+      </if>
+      <if test="invoice != null" >
+        invoice,
+      </if>
+      <if test="surtax != null" >
+        surtax,
+      </if>
+      <if test="roadtollYear != null" >
+        roadtoll_year,
+      </if>
+      <if test="roadtollMonth != null" >
+        roadtoll_month,
+      </if>
+      <if test="usetaxYear != null" >
+        usetax_year,
+      </if>
+      <if test="usetaxMonth != null" >
+        usetax_month,
+      </if>
+      <if test="insuranceYear != null" >
+        insurance_year,
+      </if>
+      <if test="insuranceMonth != null" >
+        insurance_month,
+      </if>
+      <if test="motYear != null" >
+        mot_year,
+      </if>
+      <if test="motMonth != null" >
+        mot_month,
+      </if>
+      <if test="instalment != null" >
+        instalment,
+      </if>
+      <if test="config != null" >
+        config,
+      </if>
+      <if test="color != null" >
+        color,
+      </if>
+      <if test="colour != null" >
+        colour,
+      </if>
+      <if test="distance != null" >
+        distance,
+      </if>
+      <if test="registrationMark != null" >
+        registration_mark,
+      </if>
+      <if test="price != null" >
+        price,
+      </if>
+      <if test="contactman != null" >
+        contactman,
+      </if>
+      <if test="telephone != null" >
+        telephone,
+      </if>
+      <if test="collectorAdminId != null" >
+        collector_admin_id,
+      </if>
+      <if test="recordTime != null" >
+        record_time,
+      </if>
+      <if test="statusAdminId != null" >
+        status_admin_id,
+      </if>
+      <if test="statusTime != null" >
+        status_time,
+      </if>
+      <if test="companyBranchId != null" >
+        company_branch_id,
+      </if>
+      <if test="collectionId != null" >
+        collection_id,
+      </if>
+      <if test="licenseNumber != null" >
+        license_number,
+      </if>
+      <if test="combo != null" >
+        combo,
+      </if>
+      <if test="level != null" >
+        level,
+      </if>
+      <if test="priority != null" >
+        priority,
+      </if>
+      <if test="vin != null" >
+        vin,
+      </if>
+      <if test="rank != null" >
+        rank,
+      </if>
+      <if test="vehicleCondition != null" >
+        vehicle_condition,
+      </if>
+      <if test="vctypebelong != null" >
+        vctypebelong,
+      </if>
+      <if test="rbMakecode != null" >
+        rb_makecode,
+      </if>
+      <if test="rbFamily != null" >
+        rb_family,
+      </if>
+      <if test="rbYear != null" >
+        rb_year,
+      </if>
+      <if test="rbVehiclekey != null" >
+        rb_vehiclekey,
+      </if>
+      <if test="qa != null" >
+        qa,
+      </if>
+      <if test="authcode != null" >
+        authcode,
+      </if>
+      <if test="isqa != null" >
+        isqa,
+      </if>
+      <if test="qasn != null" >
+        qasn,
+      </if>
+      <if test="payWay != null" >
+        pay_way,
+      </if>
+      <if test="priceType != null" >
+        price_type,
+      </if>
+      <if test="isCrest != null" >
+        is_crest,
+      </if>
+      <if test="crestCreateTime != null" >
+        crest_create_time,
+      </if>
+      <if test="crestStartTime != null" >
+        crest_start_time,
+      </if>
+      <if test="crestEndTime != null" >
+        crest_end_time,
+      </if>
+      <if test="crestStatus != null" >
+        crest_status,
+      </if>
+      <if test="hasBackground != null" >
+        has_background,
+      </if>
+      <if test="backgroundCreateTime != null" >
+        background_create_time,
+      </if>
+      <if test="backgroundStartTime != null" >
+        background_start_time,
+      </if>
+      <if test="backgroundEndTime != null" >
+        background_end_time,
+      </if>
+      <if test="backgroundStatus != null" >
+        background_status,
+      </if>
+      <if test="promotionState != null" >
+        promotion_state,
+      </if>
+      <if test="consumeStatus != null" >
+        consume_status,
+      </if>
+      <if test="category != null" >
+        category,
+      </if>
+      <if test="fuelType != null" >
+        fuel_type,
+      </if>
+      <if test="innerColor != null" >
+        inner_color,
+      </if>
+      <if test="engineSize != null" >
+        engine_size,
+      </if>
+      <if test="md5code != null" >
+        md5code,
+      </if>
+      <if test="brand != null" >
+        brand,
+      </if>
+      <if test="countyId != null" >
+        county_id,
+      </if>
+      <if test="markcountyId != null" >
+        markcounty_id,
+      </if>
+      <if test="sex != null" >
+        sex,
+      </if>
+      <if test="email != null" >
+        email,
+      </if>
+      <if test="usages != null" >
+        usages,
+      </if>
+      <if test="repairRecorder != null" >
+        repair_recorder,
+      </if>
+      <if test="credit != null" >
+        credit,
+      </if>
+      <if test="score != null" >
+        score,
+      </if>
+      <if test="iscore != null" >
+        iscore,
+      </if>
+      <if test="transfer != null" >
+        transfer,
+      </if>
+      <if test="service != null" >
+        service,
+      </if>
+      <if test="substatus != null" >
+        substatus,
+      </if>
+      <if test="bargainsStatus != null" >
+        bargains_status,
+      </if>
+      <if test="bodyStyle != null" >
+        body_style,
+      </if>
+      <if test="driveType != null" >
+        drive_type,
+      </if>
+      <if test="badge != null" >
+        badge,
+      </if>
+      <if test="makeYear != null" >
+        make_year,
+      </if>
+      <if test="serviceCount != null" >
+        service_count,
+      </if>
+      <if test="sellingPoint != null" >
+        selling_point,
+      </if>
+      <if test="emissionStandardId != null" >
+        emission_standard_id,
+      </if>
+      <if test="servicebit != null" >
+        servicebit,
+      </if>
+      <if test="salesId != null" >
+        sales_id,
+      </if>
+      <if test="customCode != null" >
+        custom_code,
+      </if>
+      <if test="pictureUrls != null" >
+        picture_urls,
+      </if>
+      <if test="description != null" >
+        description,
+      </if>
+      <if test="invoiceNumber != null" >
+        invoice_number,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      #{id,jdbcType=INTEGER},
+      <if test="adId != null" >
+        #{adId,jdbcType=INTEGER},
+      </if>
+      <if test="orderId != null" >
+        #{orderId,jdbcType=VARCHAR},
+      </if>
+      <if test="adType != null" >
+        #{adType,jdbcType=TINYINT},
+      </if>
+      <if test="userId != null" >
+        #{userId,jdbcType=INTEGER},
+      </if>
+      <if test="adminId != null" >
+        #{adminId,jdbcType=VARCHAR},
+      </if>
+      <if test="scheduleStartDate != null" >
+        #{scheduleStartDate,jdbcType=DATE},
+      </if>
+      <if test="scheduleEndDate != null" >
+        #{scheduleEndDate,jdbcType=DATE},
+      </if>
+      <if test="realStartTime != null" >
+        #{realStartTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="realEndTime != null" >
+        #{realEndTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="status != null" >
+        #{status,jdbcType=TINYINT},
+      </if>
+      <if test="smallpicUrl != null" >
+        #{smallpicUrl,jdbcType=VARCHAR},
+      </if>
+      <if test="brandId != null" >
+        #{brandId,jdbcType=SMALLINT},
+      </if>
+      <if test="modelId != null" >
+        #{modelId,jdbcType=SMALLINT},
+      </if>
+      <if test="modelchildId != null" >
+        #{modelchildId,jdbcType=SMALLINT},
+      </if>
+      <if test="nation != null" >
+        #{nation,jdbcType=TINYINT},
+      </if>
+      <if test="type != null" >
+        #{type,jdbcType=TINYINT},
+      </if>
+      <if test="typeExt != null" >
+        #{typeExt,jdbcType=TINYINT},
+      </if>
+      <if test="otherBrandName != null" >
+        #{otherBrandName,jdbcType=VARCHAR},
+      </if>
+      <if test="otherModelName != null" >
+        #{otherModelName,jdbcType=VARCHAR},
+      </if>
+      <if test="provinceId != null" >
+        #{provinceId,jdbcType=CHAR},
+      </if>
+      <if test="zoneId != null" >
+        #{zoneId,jdbcType=SMALLINT},
+      </if>
+      <if test="markprovinceId != null" >
+        #{markprovinceId,jdbcType=CHAR},
+      </if>
+      <if test="markzoneId != null" >
+        #{markzoneId,jdbcType=SMALLINT},
+      </if>
+      <if test="buyYear != null" >
+        #{buyYear,jdbcType=SMALLINT},
+      </if>
+      <if test="buyMonth != null" >
+        #{buyMonth,jdbcType=TINYINT},
+      </if>
+      <if test="buyDay != null" >
+        #{buyDay,jdbcType=TINYINT},
+      </if>
+      <if test="regYear != null" >
+        #{regYear,jdbcType=SMALLINT},
+      </if>
+      <if test="regMonth != null" >
+        #{regMonth,jdbcType=TINYINT},
+      </if>
+      <if test="regDay != null" >
+        #{regDay,jdbcType=TINYINT},
+      </if>
+      <if test="dealzoneId != null" >
+        #{dealzoneId,jdbcType=SMALLINT},
+      </if>
+      <if test="validdays != null" >
+        #{validdays,jdbcType=INTEGER},
+      </if>
+      <if test="gearbox != null" >
+        #{gearbox,jdbcType=TINYINT},
+      </if>
+      <if test="air != null" >
+        #{air,jdbcType=TINYINT},
+      </if>
+      <if test="cylinder != null" >
+        #{cylinder,jdbcType=TINYINT},
+      </if>
+      <if test="seating != null" >
+        #{seating,jdbcType=SMALLINT},
+      </if>
+      <if test="loads != null" >
+        #{loads,jdbcType=VARCHAR},
+      </if>
+      <if test="airdisplacement != null" >
+        #{airdisplacement,jdbcType=VARCHAR},
+      </if>
+      <if test="qhcp != null" >
+        #{qhcp,jdbcType=TINYINT},
+      </if>
+      <if test="drivingLicense != null" >
+        #{drivingLicense,jdbcType=TINYINT},
+      </if>
+      <if test="invoice != null" >
+        #{invoice,jdbcType=TINYINT},
+      </if>
+      <if test="surtax != null" >
+        #{surtax,jdbcType=TINYINT},
+      </if>
+      <if test="roadtollYear != null" >
+        #{roadtollYear,jdbcType=SMALLINT},
+      </if>
+      <if test="roadtollMonth != null" >
+        #{roadtollMonth,jdbcType=TINYINT},
+      </if>
+      <if test="usetaxYear != null" >
+        #{usetaxYear,jdbcType=SMALLINT},
+      </if>
+      <if test="usetaxMonth != null" >
+        #{usetaxMonth,jdbcType=TINYINT},
+      </if>
+      <if test="insuranceYear != null" >
+        #{insuranceYear,jdbcType=SMALLINT},
+      </if>
+      <if test="insuranceMonth != null" >
+        #{insuranceMonth,jdbcType=TINYINT},
+      </if>
+      <if test="motYear != null" >
+        #{motYear,jdbcType=SMALLINT},
+      </if>
+      <if test="motMonth != null" >
+        #{motMonth,jdbcType=TINYINT},
+      </if>
+      <if test="instalment != null" >
+        #{instalment,jdbcType=TINYINT},
+      </if>
+      <if test="config != null" >
+        #{config,jdbcType=VARCHAR},
+      </if>
+      <if test="color != null" >
+        #{color,jdbcType=TINYINT},
+      </if>
+      <if test="colour != null" >
+        #{colour,jdbcType=VARCHAR},
+      </if>
+      <if test="distance != null" >
+        #{distance,jdbcType=INTEGER},
+      </if>
+      <if test="registrationMark != null" >
+        #{registrationMark,jdbcType=TINYINT},
+      </if>
+      <if test="price != null" >
+        #{price,jdbcType=INTEGER},
+      </if>
+      <if test="contactman != null" >
+        #{contactman,jdbcType=VARCHAR},
+      </if>
+      <if test="telephone != null" >
+        #{telephone,jdbcType=VARCHAR},
+      </if>
+      <if test="collectorAdminId != null" >
+        #{collectorAdminId,jdbcType=VARCHAR},
+      </if>
+      <if test="recordTime != null" >
+        #{recordTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="statusAdminId != null" >
+        #{statusAdminId,jdbcType=VARCHAR},
+      </if>
+      <if test="statusTime != null" >
+        #{statusTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="companyBranchId != null" >
+        #{companyBranchId,jdbcType=TINYINT},
+      </if>
+      <if test="collectionId != null" >
+        #{collectionId,jdbcType=VARCHAR},
+      </if>
+      <if test="licenseNumber != null" >
+        #{licenseNumber,jdbcType=VARCHAR},
+      </if>
+      <if test="combo != null" >
+        #{combo,jdbcType=TINYINT},
+      </if>
+      <if test="level != null" >
+        #{level,jdbcType=TINYINT},
+      </if>
+      <if test="priority != null" >
+        #{priority,jdbcType=TINYINT},
+      </if>
+      <if test="vin != null" >
+        #{vin,jdbcType=VARCHAR},
+      </if>
+      <if test="rank != null" >
+        #{rank,jdbcType=INTEGER},
+      </if>
+      <if test="vehicleCondition != null" >
+        #{vehicleCondition,jdbcType=INTEGER},
+      </if>
+      <if test="vctypebelong != null" >
+        #{vctypebelong,jdbcType=INTEGER},
+      </if>
+      <if test="rbMakecode != null" >
+        #{rbMakecode,jdbcType=VARCHAR},
+      </if>
+      <if test="rbFamily != null" >
+        #{rbFamily,jdbcType=VARCHAR},
+      </if>
+      <if test="rbYear != null" >
+        #{rbYear,jdbcType=VARCHAR},
+      </if>
+      <if test="rbVehiclekey != null" >
+        #{rbVehiclekey,jdbcType=VARCHAR},
+      </if>
+      <if test="qa != null" >
+        #{qa,jdbcType=VARCHAR},
+      </if>
+      <if test="authcode != null" >
+        #{authcode,jdbcType=VARCHAR},
+      </if>
+      <if test="isqa != null" >
+        #{isqa,jdbcType=INTEGER},
+      </if>
+      <if test="qasn != null" >
+        #{qasn,jdbcType=VARCHAR},
+      </if>
+      <if test="payWay != null" >
+        #{payWay,jdbcType=TINYINT},
+      </if>
+      <if test="priceType != null" >
+        #{priceType,jdbcType=TINYINT},
+      </if>
+      <if test="isCrest != null" >
+        #{isCrest,jdbcType=TINYINT},
+      </if>
+      <if test="crestCreateTime != null" >
+        #{crestCreateTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="crestStartTime != null" >
+        #{crestStartTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="crestEndTime != null" >
+        #{crestEndTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="crestStatus != null" >
+        #{crestStatus,jdbcType=TINYINT},
+      </if>
+      <if test="hasBackground != null" >
+        #{hasBackground,jdbcType=TINYINT},
+      </if>
+      <if test="backgroundCreateTime != null" >
+        #{backgroundCreateTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="backgroundStartTime != null" >
+        #{backgroundStartTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="backgroundEndTime != null" >
+        #{backgroundEndTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="backgroundStatus != null" >
+        #{backgroundStatus,jdbcType=TINYINT},
+      </if>
+      <if test="promotionState != null" >
+        #{promotionState,jdbcType=INTEGER},
+      </if>
+      <if test="consumeStatus != null" >
+        #{consumeStatus,jdbcType=TINYINT},
+      </if>
+      <if test="category != null" >
+        #{category,jdbcType=VARCHAR},
+      </if>
+      <if test="fuelType != null" >
+        #{fuelType,jdbcType=INTEGER},
+      </if>
+      <if test="innerColor != null" >
+        #{innerColor,jdbcType=INTEGER},
+      </if>
+      <if test="engineSize != null" >
+        #{engineSize,jdbcType=INTEGER},
+      </if>
+      <if test="md5code != null" >
+        #{md5code,jdbcType=CHAR},
+      </if>
+      <if test="brand != null" >
+        #{brand,jdbcType=VARCHAR},
+      </if>
+      <if test="countyId != null" >
+        #{countyId,jdbcType=SMALLINT},
+      </if>
+      <if test="markcountyId != null" >
+        #{markcountyId,jdbcType=SMALLINT},
+      </if>
+      <if test="sex != null" >
+        #{sex,jdbcType=INTEGER},
+      </if>
+      <if test="email != null" >
+        #{email,jdbcType=VARCHAR},
+      </if>
+      <if test="usages != null" >
+        #{usages,jdbcType=INTEGER},
+      </if>
+      <if test="repairRecorder != null" >
+        #{repairRecorder,jdbcType=TINYINT},
+      </if>
+      <if test="credit != null" >
+        #{credit,jdbcType=BIT},
+      </if>
+      <if test="score != null" >
+        #{score,jdbcType=SMALLINT},
+      </if>
+      <if test="iscore != null" >
+        #{iscore,jdbcType=INTEGER},
+      </if>
+      <if test="transfer != null" >
+        #{transfer,jdbcType=TINYINT},
+      </if>
+      <if test="service != null" >
+        #{service,jdbcType=VARCHAR},
+      </if>
+      <if test="substatus != null" >
+        #{substatus,jdbcType=TINYINT},
+      </if>
+      <if test="bargainsStatus != null" >
+        #{bargainsStatus,jdbcType=TINYINT},
+      </if>
+      <if test="bodyStyle != null" >
+        #{bodyStyle,jdbcType=TINYINT},
+      </if>
+      <if test="driveType != null" >
+        #{driveType,jdbcType=TINYINT},
+      </if>
+      <if test="badge != null" >
+        #{badge,jdbcType=VARCHAR},
+      </if>
+      <if test="makeYear != null" >
+        #{makeYear,jdbcType=SMALLINT},
+      </if>
+      <if test="serviceCount != null" >
+        #{serviceCount,jdbcType=TINYINT},
+      </if>
+      <if test="sellingPoint != null" >
+        #{sellingPoint,jdbcType=VARCHAR},
+      </if>
+      <if test="emissionStandardId != null" >
+        #{emissionStandardId,jdbcType=TINYINT},
+      </if>
+      <if test="servicebit != null" >
+        #{servicebit,jdbcType=INTEGER},
+      </if>
+      <if test="salesId != null" >
+        #{salesId,jdbcType=INTEGER},
+      </if>
+      <if test="customCode != null" >
+        #{customCode,jdbcType=VARCHAR},
+      </if>
+      <if test="pictureUrls != null" >
+        #{pictureUrls,jdbcType=LONGVARCHAR},
+      </if>
+      <if test="description != null" >
+        #{description,jdbcType=LONGVARCHAR},
+      </if>
+      <if test="invoiceNumber != null" >
+        #{invoiceNumber,jdbcType=LONGVARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <select id="countByExample" parameterType="com.jiuxing.drm.model.VehicleOrderAdTmpCriteria" resultType="java.lang.Integer" >
+    select count(*) from vehicle_order_ad_tmp
+    <if test="_parameter != null" >
+      <include refid="Example_Where_Clause" />
+    </if>
+  </select>
+  <update id="updateByExampleSelective" parameterType="map" >
+    update vehicle_order_ad_tmp
+    <set >
+      <if test="record.id != null" >
+        id = #{record.id,jdbcType=INTEGER},
+      </if>
+      <if test="record.adId != null" >
+        ad_id = #{record.adId,jdbcType=INTEGER},
+      </if>
+      <if test="record.orderId != null" >
+        order_id = #{record.orderId,jdbcType=VARCHAR},
+      </if>
+      <if test="record.adType != null" >
+        ad_type = #{record.adType,jdbcType=TINYINT},
+      </if>
+      <if test="record.userId != null" >
+        user_id = #{record.userId,jdbcType=INTEGER},
+      </if>
+      <if test="record.adminId != null" >
+        admin_id = #{record.adminId,jdbcType=VARCHAR},
+      </if>
+      <if test="record.scheduleStartDate != null" >
+        schedule_start_date = #{record.scheduleStartDate,jdbcType=DATE},
+      </if>
+      <if test="record.scheduleEndDate != null" >
+        schedule_end_date = #{record.scheduleEndDate,jdbcType=DATE},
+      </if>
+      <if test="record.realStartTime != null" >
+        real_start_time = #{record.realStartTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="record.realEndTime != null" >
+        real_end_time = #{record.realEndTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="record.status != null" >
+        status = #{record.status,jdbcType=TINYINT},
+      </if>
+      <if test="record.smallpicUrl != null" >
+        smallpic_url = #{record.smallpicUrl,jdbcType=VARCHAR},
+      </if>
+      <if test="record.brandId != null" >
+        brand_id = #{record.brandId,jdbcType=SMALLINT},
+      </if>
+      <if test="record.modelId != null" >
+        model_id = #{record.modelId,jdbcType=SMALLINT},
+      </if>
+      <if test="record.modelchildId != null" >
+        modelchild_id = #{record.modelchildId,jdbcType=SMALLINT},
+      </if>
+      <if test="record.nation != null" >
+        nation = #{record.nation,jdbcType=TINYINT},
+      </if>
+      <if test="record.type != null" >
+        type = #{record.type,jdbcType=TINYINT},
+      </if>
+      <if test="record.typeExt != null" >
+        type_ext = #{record.typeExt,jdbcType=TINYINT},
+      </if>
+      <if test="record.otherBrandName != null" >
+        other_brand_name = #{record.otherBrandName,jdbcType=VARCHAR},
+      </if>
+      <if test="record.otherModelName != null" >
+        other_model_name = #{record.otherModelName,jdbcType=VARCHAR},
+      </if>
+      <if test="record.provinceId != null" >
+        province_id = #{record.provinceId,jdbcType=CHAR},
+      </if>
+      <if test="record.zoneId != null" >
+        zone_id = #{record.zoneId,jdbcType=SMALLINT},
+      </if>
+      <if test="record.markprovinceId != null" >
+        markprovince_id = #{record.markprovinceId,jdbcType=CHAR},
+      </if>
+      <if test="record.markzoneId != null" >
+        markzone_id = #{record.markzoneId,jdbcType=SMALLINT},
+      </if>
+      <if test="record.buyYear != null" >
+        buy_year = #{record.buyYear,jdbcType=SMALLINT},
+      </if>
+      <if test="record.buyMonth != null" >
+        buy_month = #{record.buyMonth,jdbcType=TINYINT},
+      </if>
+      <if test="record.buyDay != null" >
+        buy_day = #{record.buyDay,jdbcType=TINYINT},
+      </if>
+      <if test="record.regYear != null" >
+        reg_year = #{record.regYear,jdbcType=SMALLINT},
+      </if>
+      <if test="record.regMonth != null" >
+        reg_month = #{record.regMonth,jdbcType=TINYINT},
+      </if>
+      <if test="record.regDay != null" >
+        reg_day = #{record.regDay,jdbcType=TINYINT},
+      </if>
+      <if test="record.dealzoneId != null" >
+        dealzone_id = #{record.dealzoneId,jdbcType=SMALLINT},
+      </if>
+      <if test="record.validdays != null" >
+        validdays = #{record.validdays,jdbcType=INTEGER},
+      </if>
+      <if test="record.gearbox != null" >
+        gearbox = #{record.gearbox,jdbcType=TINYINT},
+      </if>
+      <if test="record.air != null" >
+        air = #{record.air,jdbcType=TINYINT},
+      </if>
+      <if test="record.cylinder != null" >
+        cylinder = #{record.cylinder,jdbcType=TINYINT},
+      </if>
+      <if test="record.seating != null" >
+        seating = #{record.seating,jdbcType=SMALLINT},
+      </if>
+      <if test="record.loads != null" >
+        loads = #{record.loads,jdbcType=VARCHAR},
+      </if>
+      <if test="record.airdisplacement != null" >
+        airdisplacement = #{record.airdisplacement,jdbcType=VARCHAR},
+      </if>
+      <if test="record.qhcp != null" >
+        qhcp = #{record.qhcp,jdbcType=TINYINT},
+      </if>
+      <if test="record.drivingLicense != null" >
+        driving_license = #{record.drivingLicense,jdbcType=TINYINT},
+      </if>
+      <if test="record.invoice != null" >
+        invoice = #{record.invoice,jdbcType=TINYINT},
+      </if>
+      <if test="record.surtax != null" >
+        surtax = #{record.surtax,jdbcType=TINYINT},
+      </if>
+      <if test="record.roadtollYear != null" >
+        roadtoll_year = #{record.roadtollYear,jdbcType=SMALLINT},
+      </if>
+      <if test="record.roadtollMonth != null" >
+        roadtoll_month = #{record.roadtollMonth,jdbcType=TINYINT},
+      </if>
+      <if test="record.usetaxYear != null" >
+        usetax_year = #{record.usetaxYear,jdbcType=SMALLINT},
+      </if>
+      <if test="record.usetaxMonth != null" >
+        usetax_month = #{record.usetaxMonth,jdbcType=TINYINT},
+      </if>
+      <if test="record.insuranceYear != null" >
+        insurance_year = #{record.insuranceYear,jdbcType=SMALLINT},
+      </if>
+      <if test="record.insuranceMonth != null" >
+        insurance_month = #{record.insuranceMonth,jdbcType=TINYINT},
+      </if>
+      <if test="record.motYear != null" >
+        mot_year = #{record.motYear,jdbcType=SMALLINT},
+      </if>
+      <if test="record.motMonth != null" >
+        mot_month = #{record.motMonth,jdbcType=TINYINT},
+      </if>
+      <if test="record.instalment != null" >
+        instalment = #{record.instalment,jdbcType=TINYINT},
+      </if>
+      <if test="record.config != null" >
+        config = #{record.config,jdbcType=VARCHAR},
+      </if>
+      <if test="record.color != null" >
+        color = #{record.color,jdbcType=TINYINT},
+      </if>
+      <if test="record.colour != null" >
+        colour = #{record.colour,jdbcType=VARCHAR},
+      </if>
+      <if test="record.distance != null" >
+        distance = #{record.distance,jdbcType=INTEGER},
+      </if>
+      <if test="record.registrationMark != null" >
+        registration_mark = #{record.registrationMark,jdbcType=TINYINT},
+      </if>
+      <if test="record.price != null" >
+        price = #{record.price,jdbcType=INTEGER},
+      </if>
+      <if test="record.contactman != null" >
+        contactman = #{record.contactman,jdbcType=VARCHAR},
+      </if>
+      <if test="record.telephone != null" >
+        telephone = #{record.telephone,jdbcType=VARCHAR},
+      </if>
+      <if test="record.collectorAdminId != null" >
+        collector_admin_id = #{record.collectorAdminId,jdbcType=VARCHAR},
+      </if>
+      <if test="record.recordTime != null" >
+        record_time = #{record.recordTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="record.statusAdminId != null" >
+        status_admin_id = #{record.statusAdminId,jdbcType=VARCHAR},
+      </if>
+      <if test="record.statusTime != null" >
+        status_time = #{record.statusTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="record.companyBranchId != null" >
+        company_branch_id = #{record.companyBranchId,jdbcType=TINYINT},
+      </if>
+      <if test="record.collectionId != null" >
+        collection_id = #{record.collectionId,jdbcType=VARCHAR},
+      </if>
+      <if test="record.licenseNumber != null" >
+        license_number = #{record.licenseNumber,jdbcType=VARCHAR},
+      </if>
+      <if test="record.combo != null" >
+        combo = #{record.combo,jdbcType=TINYINT},
+      </if>
+      <if test="record.level != null" >
+        level = #{record.level,jdbcType=TINYINT},
+      </if>
+      <if test="record.priority != null" >
+        priority = #{record.priority,jdbcType=TINYINT},
+      </if>
+      <if test="record.vin != null" >
+        vin = #{record.vin,jdbcType=VARCHAR},
+      </if>
+      <if test="record.rank != null" >
+        rank = #{record.rank,jdbcType=INTEGER},
+      </if>
+      <if test="record.vehicleCondition != null" >
+        vehicle_condition = #{record.vehicleCondition,jdbcType=INTEGER},
+      </if>
+      <if test="record.vctypebelong != null" >
+        vctypebelong = #{record.vctypebelong,jdbcType=INTEGER},
+      </if>
+      <if test="record.rbMakecode != null" >
+        rb_makecode = #{record.rbMakecode,jdbcType=VARCHAR},
+      </if>
+      <if test="record.rbFamily != null" >
+        rb_family = #{record.rbFamily,jdbcType=VARCHAR},
+      </if>
+      <if test="record.rbYear != null" >
+        rb_year = #{record.rbYear,jdbcType=VARCHAR},
+      </if>
+      <if test="record.rbVehiclekey != null" >
+        rb_vehiclekey = #{record.rbVehiclekey,jdbcType=VARCHAR},
+      </if>
+      <if test="record.qa != null" >
+        qa = #{record.qa,jdbcType=VARCHAR},
+      </if>
+      <if test="record.authcode != null" >
+        authcode = #{record.authcode,jdbcType=VARCHAR},
+      </if>
+      <if test="record.isqa != null" >
+        isqa = #{record.isqa,jdbcType=INTEGER},
+      </if>
+      <if test="record.qasn != null" >
+        qasn = #{record.qasn,jdbcType=VARCHAR},
+      </if>
+      <if test="record.payWay != null" >
+        pay_way = #{record.payWay,jdbcType=TINYINT},
+      </if>
+      <if test="record.priceType != null" >
+        price_type = #{record.priceType,jdbcType=TINYINT},
+      </if>
+      <if test="record.isCrest != null" >
+        is_crest = #{record.isCrest,jdbcType=TINYINT},
+      </if>
+      <if test="record.crestCreateTime != null" >
+        crest_create_time = #{record.crestCreateTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="record.crestStartTime != null" >
+        crest_start_time = #{record.crestStartTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="record.crestEndTime != null" >
+        crest_end_time = #{record.crestEndTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="record.crestStatus != null" >
+        crest_status = #{record.crestStatus,jdbcType=TINYINT},
+      </if>
+      <if test="record.hasBackground != null" >
+        has_background = #{record.hasBackground,jdbcType=TINYINT},
+      </if>
+      <if test="record.backgroundCreateTime != null" >
+        background_create_time = #{record.backgroundCreateTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="record.backgroundStartTime != null" >
+        background_start_time = #{record.backgroundStartTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="record.backgroundEndTime != null" >
+        background_end_time = #{record.backgroundEndTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="record.backgroundStatus != null" >
+        background_status = #{record.backgroundStatus,jdbcType=TINYINT},
+      </if>
+      <if test="record.promotionState != null" >
+        promotion_state = #{record.promotionState,jdbcType=INTEGER},
+      </if>
+      <if test="record.consumeStatus != null" >
+        consume_status = #{record.consumeStatus,jdbcType=TINYINT},
+      </if>
+      <if test="record.category != null" >
+        category = #{record.category,jdbcType=VARCHAR},
+      </if>
+      <if test="record.fuelType != null" >
+        fuel_type = #{record.fuelType,jdbcType=INTEGER},
+      </if>
+      <if test="record.innerColor != null" >
+        inner_color = #{record.innerColor,jdbcType=INTEGER},
+      </if>
+      <if test="record.engineSize != null" >
+        engine_size = #{record.engineSize,jdbcType=INTEGER},
+      </if>
+      <if test="record.md5code != null" >
+        md5code = #{record.md5code,jdbcType=CHAR},
+      </if>
+      <if test="record.brand != null" >
+        brand = #{record.brand,jdbcType=VARCHAR},
+      </if>
+      <if test="record.countyId != null" >
+        county_id = #{record.countyId,jdbcType=SMALLINT},
+      </if>
+      <if test="record.markcountyId != null" >
+        markcounty_id = #{record.markcountyId,jdbcType=SMALLINT},
+      </if>
+      <if test="record.sex != null" >
+        sex = #{record.sex,jdbcType=INTEGER},
+      </if>
+      <if test="record.email != null" >
+        email = #{record.email,jdbcType=VARCHAR},
+      </if>
+      <if test="record.usages != null" >
+        usages = #{record.usages,jdbcType=INTEGER},
+      </if>
+      <if test="record.repairRecorder != null" >
+        repair_recorder = #{record.repairRecorder,jdbcType=TINYINT},
+      </if>
+      <if test="record.credit != null" >
+        credit = #{record.credit,jdbcType=BIT},
+      </if>
+      <if test="record.score != null" >
+        score = #{record.score,jdbcType=SMALLINT},
+      </if>
+      <if test="record.iscore != null" >
+        iscore = #{record.iscore,jdbcType=INTEGER},
+      </if>
+      <if test="record.transfer != null" >
+        transfer = #{record.transfer,jdbcType=TINYINT},
+      </if>
+      <if test="record.service != null" >
+        service = #{record.service,jdbcType=VARCHAR},
+      </if>
+      <if test="record.substatus != null" >
+        substatus = #{record.substatus,jdbcType=TINYINT},
+      </if>
+      <if test="record.bargainsStatus != null" >
+        bargains_status = #{record.bargainsStatus,jdbcType=TINYINT},
+      </if>
+      <if test="record.bodyStyle != null" >
+        body_style = #{record.bodyStyle,jdbcType=TINYINT},
+      </if>
+      <if test="record.driveType != null" >
+        drive_type = #{record.driveType,jdbcType=TINYINT},
+      </if>
+      <if test="record.badge != null" >
+        badge = #{record.badge,jdbcType=VARCHAR},
+      </if>
+      <if test="record.makeYear != null" >
+        make_year = #{record.makeYear,jdbcType=SMALLINT},
+      </if>
+      <if test="record.serviceCount != null" >
+        service_count = #{record.serviceCount,jdbcType=TINYINT},
+      </if>
+      <if test="record.sellingPoint != null" >
+        selling_point = #{record.sellingPoint,jdbcType=VARCHAR},
+      </if>
+      <if test="record.emissionStandardId != null" >
+        emission_standard_id = #{record.emissionStandardId,jdbcType=TINYINT},
+      </if>
+      <if test="record.servicebit != null" >
+        servicebit = #{record.servicebit,jdbcType=INTEGER},
+      </if>
+      <if test="record.salesId != null" >
+        sales_id = #{record.salesId,jdbcType=INTEGER},
+      </if>
+      <if test="record.customCode != null" >
+        custom_code = #{record.customCode,jdbcType=VARCHAR},
+      </if>
+      <if test="record.pictureUrls != null" >
+        picture_urls = #{record.pictureUrls,jdbcType=LONGVARCHAR},
+      </if>
+      <if test="record.description != null" >
+        description = #{record.description,jdbcType=LONGVARCHAR},
+      </if>
+      <if test="record.invoiceNumber != null" >
+        invoice_number = #{record.invoiceNumber,jdbcType=LONGVARCHAR},
+      </if>
+    </set>
+    <if test="_parameter != null" >
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByExampleWithBLOBs" parameterType="map" >
+    update vehicle_order_ad_tmp
+    set id = #{record.id,jdbcType=INTEGER},
+      ad_id = #{record.adId,jdbcType=INTEGER},
+      order_id = #{record.orderId,jdbcType=VARCHAR},
+      ad_type = #{record.adType,jdbcType=TINYINT},
+      user_id = #{record.userId,jdbcType=INTEGER},
+      admin_id = #{record.adminId,jdbcType=VARCHAR},
+      schedule_start_date = #{record.scheduleStartDate,jdbcType=DATE},
+      schedule_end_date = #{record.scheduleEndDate,jdbcType=DATE},
+      real_start_time = #{record.realStartTime,jdbcType=TIMESTAMP},
+      real_end_time = #{record.realEndTime,jdbcType=TIMESTAMP},
+      status = #{record.status,jdbcType=TINYINT},
+      smallpic_url = #{record.smallpicUrl,jdbcType=VARCHAR},
+      brand_id = #{record.brandId,jdbcType=SMALLINT},
+      model_id = #{record.modelId,jdbcType=SMALLINT},
+      modelchild_id = #{record.modelchildId,jdbcType=SMALLINT},
+      nation = #{record.nation,jdbcType=TINYINT},
+      type = #{record.type,jdbcType=TINYINT},
+      type_ext = #{record.typeExt,jdbcType=TINYINT},
+      other_brand_name = #{record.otherBrandName,jdbcType=VARCHAR},
+      other_model_name = #{record.otherModelName,jdbcType=VARCHAR},
+      province_id = #{record.provinceId,jdbcType=CHAR},
+      zone_id = #{record.zoneId,jdbcType=SMALLINT},
+      markprovince_id = #{record.markprovinceId,jdbcType=CHAR},
+      markzone_id = #{record.markzoneId,jdbcType=SMALLINT},
+      buy_year = #{record.buyYear,jdbcType=SMALLINT},
+      buy_month = #{record.buyMonth,jdbcType=TINYINT},
+      buy_day = #{record.buyDay,jdbcType=TINYINT},
+      reg_year = #{record.regYear,jdbcType=SMALLINT},
+      reg_month = #{record.regMonth,jdbcType=TINYINT},
+      reg_day = #{record.regDay,jdbcType=TINYINT},
+      dealzone_id = #{record.dealzoneId,jdbcType=SMALLINT},
+      validdays = #{record.validdays,jdbcType=INTEGER},
+      gearbox = #{record.gearbox,jdbcType=TINYINT},
+      air = #{record.air,jdbcType=TINYINT},
+      cylinder = #{record.cylinder,jdbcType=TINYINT},
+      seating = #{record.seating,jdbcType=SMALLINT},
+      loads = #{record.loads,jdbcType=VARCHAR},
+      airdisplacement = #{record.airdisplacement,jdbcType=VARCHAR},
+      qhcp = #{record.qhcp,jdbcType=TINYINT},
+      driving_license = #{record.drivingLicense,jdbcType=TINYINT},
+      invoice = #{record.invoice,jdbcType=TINYINT},
+      surtax = #{record.surtax,jdbcType=TINYINT},
+      roadtoll_year = #{record.roadtollYear,jdbcType=SMALLINT},
+      roadtoll_month = #{record.roadtollMonth,jdbcType=TINYINT},
+      usetax_year = #{record.usetaxYear,jdbcType=SMALLINT},
+      usetax_month = #{record.usetaxMonth,jdbcType=TINYINT},
+      insurance_year = #{record.insuranceYear,jdbcType=SMALLINT},
+      insurance_month = #{record.insuranceMonth,jdbcType=TINYINT},
+      mot_year = #{record.motYear,jdbcType=SMALLINT},
+      mot_month = #{record.motMonth,jdbcType=TINYINT},
+      instalment = #{record.instalment,jdbcType=TINYINT},
+      config = #{record.config,jdbcType=VARCHAR},
+      color = #{record.color,jdbcType=TINYINT},
+      colour = #{record.colour,jdbcType=VARCHAR},
+      distance = #{record.distance,jdbcType=INTEGER},
+      registration_mark = #{record.registrationMark,jdbcType=TINYINT},
+      price = #{record.price,jdbcType=INTEGER},
+      contactman = #{record.contactman,jdbcType=VARCHAR},
+      telephone = #{record.telephone,jdbcType=VARCHAR},
+      collector_admin_id = #{record.collectorAdminId,jdbcType=VARCHAR},
+      record_time = #{record.recordTime,jdbcType=TIMESTAMP},
+      status_admin_id = #{record.statusAdminId,jdbcType=VARCHAR},
+      status_time = #{record.statusTime,jdbcType=TIMESTAMP},
+      company_branch_id = #{record.companyBranchId,jdbcType=TINYINT},
+      collection_id = #{record.collectionId,jdbcType=VARCHAR},
+      license_number = #{record.licenseNumber,jdbcType=VARCHAR},
+      combo = #{record.combo,jdbcType=TINYINT},
+      level = #{record.level,jdbcType=TINYINT},
+      priority = #{record.priority,jdbcType=TINYINT},
+      vin = #{record.vin,jdbcType=VARCHAR},
+      rank = #{record.rank,jdbcType=INTEGER},
+      vehicle_condition = #{record.vehicleCondition,jdbcType=INTEGER},
+      vctypebelong = #{record.vctypebelong,jdbcType=INTEGER},
+      rb_makecode = #{record.rbMakecode,jdbcType=VARCHAR},
+      rb_family = #{record.rbFamily,jdbcType=VARCHAR},
+      rb_year = #{record.rbYear,jdbcType=VARCHAR},
+      rb_vehiclekey = #{record.rbVehiclekey,jdbcType=VARCHAR},
+      qa = #{record.qa,jdbcType=VARCHAR},
+      authcode = #{record.authcode,jdbcType=VARCHAR},
+      isqa = #{record.isqa,jdbcType=INTEGER},
+      qasn = #{record.qasn,jdbcType=VARCHAR},
+      pay_way = #{record.payWay,jdbcType=TINYINT},
+      price_type = #{record.priceType,jdbcType=TINYINT},
+      is_crest = #{record.isCrest,jdbcType=TINYINT},
+      crest_create_time = #{record.crestCreateTime,jdbcType=TIMESTAMP},
+      crest_start_time = #{record.crestStartTime,jdbcType=TIMESTAMP},
+      crest_end_time = #{record.crestEndTime,jdbcType=TIMESTAMP},
+      crest_status = #{record.crestStatus,jdbcType=TINYINT},
+      has_background = #{record.hasBackground,jdbcType=TINYINT},
+      background_create_time = #{record.backgroundCreateTime,jdbcType=TIMESTAMP},
+      background_start_time = #{record.backgroundStartTime,jdbcType=TIMESTAMP},
+      background_end_time = #{record.backgroundEndTime,jdbcType=TIMESTAMP},
+      background_status = #{record.backgroundStatus,jdbcType=TINYINT},
+      promotion_state = #{record.promotionState,jdbcType=INTEGER},
+      consume_status = #{record.consumeStatus,jdbcType=TINYINT},
+      category = #{record.category,jdbcType=VARCHAR},
+      fuel_type = #{record.fuelType,jdbcType=INTEGER},
+      inner_color = #{record.innerColor,jdbcType=INTEGER},
+      engine_size = #{record.engineSize,jdbcType=INTEGER},
+      md5code = #{record.md5code,jdbcType=CHAR},
+      brand = #{record.brand,jdbcType=VARCHAR},
+      county_id = #{record.countyId,jdbcType=SMALLINT},
+      markcounty_id = #{record.markcountyId,jdbcType=SMALLINT},
+      sex = #{record.sex,jdbcType=INTEGER},
+      email = #{record.email,jdbcType=VARCHAR},
+      usages = #{record.usages,jdbcType=INTEGER},
+      repair_recorder = #{record.repairRecorder,jdbcType=TINYINT},
+      credit = #{record.credit,jdbcType=BIT},
+      score = #{record.score,jdbcType=SMALLINT},
+      iscore = #{record.iscore,jdbcType=INTEGER},
+      transfer = #{record.transfer,jdbcType=TINYINT},
+      service = #{record.service,jdbcType=VARCHAR},
+      substatus = #{record.substatus,jdbcType=TINYINT},
+      bargains_status = #{record.bargainsStatus,jdbcType=TINYINT},
+      body_style = #{record.bodyStyle,jdbcType=TINYINT},
+      drive_type = #{record.driveType,jdbcType=TINYINT},
+      badge = #{record.badge,jdbcType=VARCHAR},
+      make_year = #{record.makeYear,jdbcType=SMALLINT},
+      service_count = #{record.serviceCount,jdbcType=TINYINT},
+      selling_point = #{record.sellingPoint,jdbcType=VARCHAR},
+      emission_standard_id = #{record.emissionStandardId,jdbcType=TINYINT},
+      servicebit = #{record.servicebit,jdbcType=INTEGER},
+      sales_id = #{record.salesId,jdbcType=INTEGER},
+      custom_code = #{record.customCode,jdbcType=VARCHAR},
+      picture_urls = #{record.pictureUrls,jdbcType=LONGVARCHAR},
+      description = #{record.description,jdbcType=LONGVARCHAR},
+      invoice_number = #{record.invoiceNumber,jdbcType=LONGVARCHAR}
+    <if test="_parameter != null" >
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByExample" parameterType="map" >
+    update vehicle_order_ad_tmp
+    set id = #{record.id,jdbcType=INTEGER},
+      ad_id = #{record.adId,jdbcType=INTEGER},
+      order_id = #{record.orderId,jdbcType=VARCHAR},
+      ad_type = #{record.adType,jdbcType=TINYINT},
+      user_id = #{record.userId,jdbcType=INTEGER},
+      admin_id = #{record.adminId,jdbcType=VARCHAR},
+      schedule_start_date = #{record.scheduleStartDate,jdbcType=DATE},
+      schedule_end_date = #{record.scheduleEndDate,jdbcType=DATE},
+      real_start_time = #{record.realStartTime,jdbcType=TIMESTAMP},
+      real_end_time = #{record.realEndTime,jdbcType=TIMESTAMP},
+      status = #{record.status,jdbcType=TINYINT},
+      smallpic_url = #{record.smallpicUrl,jdbcType=VARCHAR},
+      brand_id = #{record.brandId,jdbcType=SMALLINT},
+      model_id = #{record.modelId,jdbcType=SMALLINT},
+      modelchild_id = #{record.modelchildId,jdbcType=SMALLINT},
+      nation = #{record.nation,jdbcType=TINYINT},
+      type = #{record.type,jdbcType=TINYINT},
+      type_ext = #{record.typeExt,jdbcType=TINYINT},
+      other_brand_name = #{record.otherBrandName,jdbcType=VARCHAR},
+      other_model_name = #{record.otherModelName,jdbcType=VARCHAR},
+      province_id = #{record.provinceId,jdbcType=CHAR},
+      zone_id = #{record.zoneId,jdbcType=SMALLINT},
+      markprovince_id = #{record.markprovinceId,jdbcType=CHAR},
+      markzone_id = #{record.markzoneId,jdbcType=SMALLINT},
+      buy_year = #{record.buyYear,jdbcType=SMALLINT},
+      buy_month = #{record.buyMonth,jdbcType=TINYINT},
+      buy_day = #{record.buyDay,jdbcType=TINYINT},
+      reg_year = #{record.regYear,jdbcType=SMALLINT},
+      reg_month = #{record.regMonth,jdbcType=TINYINT},
+      reg_day = #{record.regDay,jdbcType=TINYINT},
+      dealzone_id = #{record.dealzoneId,jdbcType=SMALLINT},
+      validdays = #{record.validdays,jdbcType=INTEGER},
+      gearbox = #{record.gearbox,jdbcType=TINYINT},
+      air = #{record.air,jdbcType=TINYINT},
+      cylinder = #{record.cylinder,jdbcType=TINYINT},
+      seating = #{record.seating,jdbcType=SMALLINT},
+      loads = #{record.loads,jdbcType=VARCHAR},
+      airdisplacement = #{record.airdisplacement,jdbcType=VARCHAR},
+      qhcp = #{record.qhcp,jdbcType=TINYINT},
+      driving_license = #{record.drivingLicense,jdbcType=TINYINT},
+      invoice = #{record.invoice,jdbcType=TINYINT},
+      surtax = #{record.surtax,jdbcType=TINYINT},
+      roadtoll_year = #{record.roadtollYear,jdbcType=SMALLINT},
+      roadtoll_month = #{record.roadtollMonth,jdbcType=TINYINT},
+      usetax_year = #{record.usetaxYear,jdbcType=SMALLINT},
+      usetax_month = #{record.usetaxMonth,jdbcType=TINYINT},
+      insurance_year = #{record.insuranceYear,jdbcType=SMALLINT},
+      insurance_month = #{record.insuranceMonth,jdbcType=TINYINT},
+      mot_year = #{record.motYear,jdbcType=SMALLINT},
+      mot_month = #{record.motMonth,jdbcType=TINYINT},
+      instalment = #{record.instalment,jdbcType=TINYINT},
+      config = #{record.config,jdbcType=VARCHAR},
+      color = #{record.color,jdbcType=TINYINT},
+      colour = #{record.colour,jdbcType=VARCHAR},
+      distance = #{record.distance,jdbcType=INTEGER},
+      registration_mark = #{record.registrationMark,jdbcType=TINYINT},
+      price = #{record.price,jdbcType=INTEGER},
+      contactman = #{record.contactman,jdbcType=VARCHAR},
+      telephone = #{record.telephone,jdbcType=VARCHAR},
+      collector_admin_id = #{record.collectorAdminId,jdbcType=VARCHAR},
+      record_time = #{record.recordTime,jdbcType=TIMESTAMP},
+      status_admin_id = #{record.statusAdminId,jdbcType=VARCHAR},
+      status_time = #{record.statusTime,jdbcType=TIMESTAMP},
+      company_branch_id = #{record.companyBranchId,jdbcType=TINYINT},
+      collection_id = #{record.collectionId,jdbcType=VARCHAR},
+      license_number = #{record.licenseNumber,jdbcType=VARCHAR},
+      combo = #{record.combo,jdbcType=TINYINT},
+      level = #{record.level,jdbcType=TINYINT},
+      priority = #{record.priority,jdbcType=TINYINT},
+      vin = #{record.vin,jdbcType=VARCHAR},
+      rank = #{record.rank,jdbcType=INTEGER},
+      vehicle_condition = #{record.vehicleCondition,jdbcType=INTEGER},
+      vctypebelong = #{record.vctypebelong,jdbcType=INTEGER},
+      rb_makecode = #{record.rbMakecode,jdbcType=VARCHAR},
+      rb_family = #{record.rbFamily,jdbcType=VARCHAR},
+      rb_year = #{record.rbYear,jdbcType=VARCHAR},
+      rb_vehiclekey = #{record.rbVehiclekey,jdbcType=VARCHAR},
+      qa = #{record.qa,jdbcType=VARCHAR},
+      authcode = #{record.authcode,jdbcType=VARCHAR},
+      isqa = #{record.isqa,jdbcType=INTEGER},
+      qasn = #{record.qasn,jdbcType=VARCHAR},
+      pay_way = #{record.payWay,jdbcType=TINYINT},
+      price_type = #{record.priceType,jdbcType=TINYINT},
+      is_crest = #{record.isCrest,jdbcType=TINYINT},
+      crest_create_time = #{record.crestCreateTime,jdbcType=TIMESTAMP},
+      crest_start_time = #{record.crestStartTime,jdbcType=TIMESTAMP},
+      crest_end_time = #{record.crestEndTime,jdbcType=TIMESTAMP},
+      crest_status = #{record.crestStatus,jdbcType=TINYINT},
+      has_background = #{record.hasBackground,jdbcType=TINYINT},
+      background_create_time = #{record.backgroundCreateTime,jdbcType=TIMESTAMP},
+      background_start_time = #{record.backgroundStartTime,jdbcType=TIMESTAMP},
+      background_end_time = #{record.backgroundEndTime,jdbcType=TIMESTAMP},
+      background_status = #{record.backgroundStatus,jdbcType=TINYINT},
+      promotion_state = #{record.promotionState,jdbcType=INTEGER},
+      consume_status = #{record.consumeStatus,jdbcType=TINYINT},
+      category = #{record.category,jdbcType=VARCHAR},
+      fuel_type = #{record.fuelType,jdbcType=INTEGER},
+      inner_color = #{record.innerColor,jdbcType=INTEGER},
+      engine_size = #{record.engineSize,jdbcType=INTEGER},
+      md5code = #{record.md5code,jdbcType=CHAR},
+      brand = #{record.brand,jdbcType=VARCHAR},
+      county_id = #{record.countyId,jdbcType=SMALLINT},
+      markcounty_id = #{record.markcountyId,jdbcType=SMALLINT},
+      sex = #{record.sex,jdbcType=INTEGER},
+      email = #{record.email,jdbcType=VARCHAR},
+      usages = #{record.usages,jdbcType=INTEGER},
+      repair_recorder = #{record.repairRecorder,jdbcType=TINYINT},
+      credit = #{record.credit,jdbcType=BIT},
+      score = #{record.score,jdbcType=SMALLINT},
+      iscore = #{record.iscore,jdbcType=INTEGER},
+      transfer = #{record.transfer,jdbcType=TINYINT},
+      service = #{record.service,jdbcType=VARCHAR},
+      substatus = #{record.substatus,jdbcType=TINYINT},
+      bargains_status = #{record.bargainsStatus,jdbcType=TINYINT},
+      body_style = #{record.bodyStyle,jdbcType=TINYINT},
+      drive_type = #{record.driveType,jdbcType=TINYINT},
+      badge = #{record.badge,jdbcType=VARCHAR},
+      make_year = #{record.makeYear,jdbcType=SMALLINT},
+      service_count = #{record.serviceCount,jdbcType=TINYINT},
+      selling_point = #{record.sellingPoint,jdbcType=VARCHAR},
+      emission_standard_id = #{record.emissionStandardId,jdbcType=TINYINT},
+      servicebit = #{record.servicebit,jdbcType=INTEGER},
+      sales_id = #{record.salesId,jdbcType=INTEGER},
+      custom_code = #{record.customCode,jdbcType=VARCHAR}
+    <if test="_parameter != null" >
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByPrimaryKeySelective" parameterType="com.jiuxing.drm.model.VehicleOrderAdTmp" >
+    update vehicle_order_ad_tmp
+    <set >
+      <if test="adId != null" >
+        ad_id = #{adId,jdbcType=INTEGER},
+      </if>
+      <if test="orderId != null" >
+        order_id = #{orderId,jdbcType=VARCHAR},
+      </if>
+      <if test="adType != null" >
+        ad_type = #{adType,jdbcType=TINYINT},
+      </if>
+      <if test="userId != null" >
+        user_id = #{userId,jdbcType=INTEGER},
+      </if>
+      <if test="adminId != null" >
+        admin_id = #{adminId,jdbcType=VARCHAR},
+      </if>
+      <if test="scheduleStartDate != null" >
+        schedule_start_date = #{scheduleStartDate,jdbcType=DATE},
+      </if>
+      <if test="scheduleEndDate != null" >
+        schedule_end_date = #{scheduleEndDate,jdbcType=DATE},
+      </if>
+      <if test="realStartTime != null" >
+        real_start_time = #{realStartTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="realEndTime != null" >
+        real_end_time = #{realEndTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="status != null" >
+        status = #{status,jdbcType=TINYINT},
+      </if>
+      <if test="smallpicUrl != null" >
+        smallpic_url = #{smallpicUrl,jdbcType=VARCHAR},
+      </if>
+      <if test="brandId != null" >
+        brand_id = #{brandId,jdbcType=SMALLINT},
+      </if>
+      <if test="modelId != null" >
+        model_id = #{modelId,jdbcType=SMALLINT},
+      </if>
+      <if test="modelchildId != null" >
+        modelchild_id = #{modelchildId,jdbcType=SMALLINT},
+      </if>
+      <if test="nation != null" >
+        nation = #{nation,jdbcType=TINYINT},
+      </if>
+      <if test="type != null" >
+        type = #{type,jdbcType=TINYINT},
+      </if>
+      <if test="typeExt != null" >
+        type_ext = #{typeExt,jdbcType=TINYINT},
+      </if>
+      <if test="otherBrandName != null" >
+        other_brand_name = #{otherBrandName,jdbcType=VARCHAR},
+      </if>
+      <if test="otherModelName != null" >
+        other_model_name = #{otherModelName,jdbcType=VARCHAR},
+      </if>
+      <if test="provinceId != null" >
+        province_id = #{provinceId,jdbcType=CHAR},
+      </if>
+      <if test="zoneId != null" >
+        zone_id = #{zoneId,jdbcType=SMALLINT},
+      </if>
+      <if test="markprovinceId != null" >
+        markprovince_id = #{markprovinceId,jdbcType=CHAR},
+      </if>
+      <if test="markzoneId != null" >
+        markzone_id = #{markzoneId,jdbcType=SMALLINT},
+      </if>
+      <if test="buyYear != null" >
+        buy_year = #{buyYear,jdbcType=SMALLINT},
+      </if>
+      <if test="buyMonth != null" >
+        buy_month = #{buyMonth,jdbcType=TINYINT},
+      </if>
+      <if test="buyDay != null" >
+        buy_day = #{buyDay,jdbcType=TINYINT},
+      </if>
+      <if test="regYear != null" >
+        reg_year = #{regYear,jdbcType=SMALLINT},
+      </if>
+      <if test="regMonth != null" >
+        reg_month = #{regMonth,jdbcType=TINYINT},
+      </if>
+      <if test="regDay != null" >
+        reg_day = #{regDay,jdbcType=TINYINT},
+      </if>
+      <if test="dealzoneId != null" >
+        dealzone_id = #{dealzoneId,jdbcType=SMALLINT},
+      </if>
+      <if test="validdays != null" >
+        validdays = #{validdays,jdbcType=INTEGER},
+      </if>
+      <if test="gearbox != null" >
+        gearbox = #{gearbox,jdbcType=TINYINT},
+      </if>
+      <if test="air != null" >
+        air = #{air,jdbcType=TINYINT},
+      </if>
+      <if test="cylinder != null" >
+        cylinder = #{cylinder,jdbcType=TINYINT},
+      </if>
+      <if test="seating != null" >
+        seating = #{seating,jdbcType=SMALLINT},
+      </if>
+      <if test="loads != null" >
+        loads = #{loads,jdbcType=VARCHAR},
+      </if>
+      <if test="airdisplacement != null" >
+        airdisplacement = #{airdisplacement,jdbcType=VARCHAR},
+      </if>
+      <if test="qhcp != null" >
+        qhcp = #{qhcp,jdbcType=TINYINT},
+      </if>
+      <if test="drivingLicense != null" >
+        driving_license = #{drivingLicense,jdbcType=TINYINT},
+      </if>
+      <if test="invoice != null" >
+        invoice = #{invoice,jdbcType=TINYINT},
+      </if>
+      <if test="surtax != null" >
+        surtax = #{surtax,jdbcType=TINYINT},
+      </if>
+      <if test="roadtollYear != null" >
+        roadtoll_year = #{roadtollYear,jdbcType=SMALLINT},
+      </if>
+      <if test="roadtollMonth != null" >
+        roadtoll_month = #{roadtollMonth,jdbcType=TINYINT},
+      </if>
+      <if test="usetaxYear != null" >
+        usetax_year = #{usetaxYear,jdbcType=SMALLINT},
+      </if>
+      <if test="usetaxMonth != null" >
+        usetax_month = #{usetaxMonth,jdbcType=TINYINT},
+      </if>
+      <if test="insuranceYear != null" >
+        insurance_year = #{insuranceYear,jdbcType=SMALLINT},
+      </if>
+      <if test="insuranceMonth != null" >
+        insurance_month = #{insuranceMonth,jdbcType=TINYINT},
+      </if>
+      <if test="motYear != null" >
+        mot_year = #{motYear,jdbcType=SMALLINT},
+      </if>
+      <if test="motMonth != null" >
+        mot_month = #{motMonth,jdbcType=TINYINT},
+      </if>
+      <if test="instalment != null" >
+        instalment = #{instalment,jdbcType=TINYINT},
+      </if>
+      <if test="config != null" >
+        config = #{config,jdbcType=VARCHAR},
+      </if>
+      <if test="color != null" >
+        color = #{color,jdbcType=TINYINT},
+      </if>
+      <if test="colour != null" >
+        colour = #{colour,jdbcType=VARCHAR},
+      </if>
+      <if test="distance != null" >
+        distance = #{distance,jdbcType=INTEGER},
+      </if>
+      <if test="registrationMark != null" >
+        registration_mark = #{registrationMark,jdbcType=TINYINT},
+      </if>
+      <if test="price != null" >
+        price = #{price,jdbcType=INTEGER},
+      </if>
+      <if test="contactman != null" >
+        contactman = #{contactman,jdbcType=VARCHAR},
+      </if>
+      <if test="telephone != null" >
+        telephone = #{telephone,jdbcType=VARCHAR},
+      </if>
+      <if test="collectorAdminId != null" >
+        collector_admin_id = #{collectorAdminId,jdbcType=VARCHAR},
+      </if>
+      <if test="recordTime != null" >
+        record_time = #{recordTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="statusAdminId != null" >
+        status_admin_id = #{statusAdminId,jdbcType=VARCHAR},
+      </if>
+      <if test="statusTime != null" >
+        status_time = #{statusTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="companyBranchId != null" >
+        company_branch_id = #{companyBranchId,jdbcType=TINYINT},
+      </if>
+      <if test="collectionId != null" >
+        collection_id = #{collectionId,jdbcType=VARCHAR},
+      </if>
+      <if test="licenseNumber != null" >
+        license_number = #{licenseNumber,jdbcType=VARCHAR},
+      </if>
+      <if test="combo != null" >
+        combo = #{combo,jdbcType=TINYINT},
+      </if>
+      <if test="level != null" >
+        level = #{level,jdbcType=TINYINT},
+      </if>
+      <if test="priority != null" >
+        priority = #{priority,jdbcType=TINYINT},
+      </if>
+      <if test="vin != null" >
+        vin = #{vin,jdbcType=VARCHAR},
+      </if>
+      <if test="rank != null" >
+        rank = #{rank,jdbcType=INTEGER},
+      </if>
+      <if test="vehicleCondition != null" >
+        vehicle_condition = #{vehicleCondition,jdbcType=INTEGER},
+      </if>
+      <if test="vctypebelong != null" >
+        vctypebelong = #{vctypebelong,jdbcType=INTEGER},
+      </if>
+      <if test="rbMakecode != null" >
+        rb_makecode = #{rbMakecode,jdbcType=VARCHAR},
+      </if>
+      <if test="rbFamily != null" >
+        rb_family = #{rbFamily,jdbcType=VARCHAR},
+      </if>
+      <if test="rbYear != null" >
+        rb_year = #{rbYear,jdbcType=VARCHAR},
+      </if>
+      <if test="rbVehiclekey != null" >
+        rb_vehiclekey = #{rbVehiclekey,jdbcType=VARCHAR},
+      </if>
+      <if test="qa != null" >
+        qa = #{qa,jdbcType=VARCHAR},
+      </if>
+      <if test="authcode != null" >
+        authcode = #{authcode,jdbcType=VARCHAR},
+      </if>
+      <if test="isqa != null" >
+        isqa = #{isqa,jdbcType=INTEGER},
+      </if>
+      <if test="qasn != null" >
+        qasn = #{qasn,jdbcType=VARCHAR},
+      </if>
+      <if test="payWay != null" >
+        pay_way = #{payWay,jdbcType=TINYINT},
+      </if>
+      <if test="priceType != null" >
+        price_type = #{priceType,jdbcType=TINYINT},
+      </if>
+      <if test="isCrest != null" >
+        is_crest = #{isCrest,jdbcType=TINYINT},
+      </if>
+      <if test="crestCreateTime != null" >
+        crest_create_time = #{crestCreateTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="crestStartTime != null" >
+        crest_start_time = #{crestStartTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="crestEndTime != null" >
+        crest_end_time = #{crestEndTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="crestStatus != null" >
+        crest_status = #{crestStatus,jdbcType=TINYINT},
+      </if>
+      <if test="hasBackground != null" >
+        has_background = #{hasBackground,jdbcType=TINYINT},
+      </if>
+      <if test="backgroundCreateTime != null" >
+        background_create_time = #{backgroundCreateTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="backgroundStartTime != null" >
+        background_start_time = #{backgroundStartTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="backgroundEndTime != null" >
+        background_end_time = #{backgroundEndTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="backgroundStatus != null" >
+        background_status = #{backgroundStatus,jdbcType=TINYINT},
+      </if>
+      <if test="promotionState != null" >
+        promotion_state = #{promotionState,jdbcType=INTEGER},
+      </if>
+      <if test="consumeStatus != null" >
+        consume_status = #{consumeStatus,jdbcType=TINYINT},
+      </if>
+      <if test="category != null" >
+        category = #{category,jdbcType=VARCHAR},
+      </if>
+      <if test="fuelType != null" >
+        fuel_type = #{fuelType,jdbcType=INTEGER},
+      </if>
+      <if test="innerColor != null" >
+        inner_color = #{innerColor,jdbcType=INTEGER},
+      </if>
+      <if test="engineSize != null" >
+        engine_size = #{engineSize,jdbcType=INTEGER},
+      </if>
+      <if test="md5code != null" >
+        md5code = #{md5code,jdbcType=CHAR},
+      </if>
+      <if test="brand != null" >
+        brand = #{brand,jdbcType=VARCHAR},
+      </if>
+      <if test="countyId != null" >
+        county_id = #{countyId,jdbcType=SMALLINT},
+      </if>
+      <if test="markcountyId != null" >
+        markcounty_id = #{markcountyId,jdbcType=SMALLINT},
+      </if>
+      <if test="sex != null" >
+        sex = #{sex,jdbcType=INTEGER},
+      </if>
+      <if test="email != null" >
+        email = #{email,jdbcType=VARCHAR},
+      </if>
+      <if test="usages != null" >
+        usages = #{usages,jdbcType=INTEGER},
+      </if>
+      <if test="repairRecorder != null" >
+        repair_recorder = #{repairRecorder,jdbcType=TINYINT},
+      </if>
+      <if test="credit != null" >
+        credit = #{credit,jdbcType=BIT},
+      </if>
+      <if test="score != null" >
+        score = #{score,jdbcType=SMALLINT},
+      </if>
+      <if test="iscore != null" >
+        iscore = #{iscore,jdbcType=INTEGER},
+      </if>
+      <if test="transfer != null" >
+        transfer = #{transfer,jdbcType=TINYINT},
+      </if>
+      <if test="service != null" >
+        service = #{service,jdbcType=VARCHAR},
+      </if>
+      <if test="substatus != null" >
+        substatus = #{substatus,jdbcType=TINYINT},
+      </if>
+      <if test="bargainsStatus != null" >
+        bargains_status = #{bargainsStatus,jdbcType=TINYINT},
+      </if>
+      <if test="bodyStyle != null" >
+        body_style = #{bodyStyle,jdbcType=TINYINT},
+      </if>
+      <if test="driveType != null" >
+        drive_type = #{driveType,jdbcType=TINYINT},
+      </if>
+      <if test="badge != null" >
+        badge = #{badge,jdbcType=VARCHAR},
+      </if>
+      <if test="makeYear != null" >
+        make_year = #{makeYear,jdbcType=SMALLINT},
+      </if>
+      <if test="serviceCount != null" >
+        service_count = #{serviceCount,jdbcType=TINYINT},
+      </if>
+      <if test="sellingPoint != null" >
+        selling_point = #{sellingPoint,jdbcType=VARCHAR},
+      </if>
+      <if test="emissionStandardId != null" >
+        emission_standard_id = #{emissionStandardId,jdbcType=TINYINT},
+      </if>
+      <if test="servicebit != null" >
+        servicebit = #{servicebit,jdbcType=INTEGER},
+      </if>
+      <if test="salesId != null" >
+        sales_id = #{salesId,jdbcType=INTEGER},
+      </if>
+      <if test="customCode != null" >
+        custom_code = #{customCode,jdbcType=VARCHAR},
+      </if>
+      <if test="pictureUrls != null" >
+        picture_urls = #{pictureUrls,jdbcType=LONGVARCHAR},
+      </if>
+      <if test="description != null" >
+        description = #{description,jdbcType=LONGVARCHAR},
+      </if>
+      <if test="invoiceNumber != null" >
+        invoice_number = #{invoiceNumber,jdbcType=LONGVARCHAR},
+      </if>
+    </set>
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKeyWithBLOBs" parameterType="com.jiuxing.drm.model.VehicleOrderAdTmp" >
+    update vehicle_order_ad_tmp
+    set ad_id = #{adId,jdbcType=INTEGER},
+      order_id = #{orderId,jdbcType=VARCHAR},
+      ad_type = #{adType,jdbcType=TINYINT},
+      user_id = #{userId,jdbcType=INTEGER},
+      admin_id = #{adminId,jdbcType=VARCHAR},
+      schedule_start_date = #{scheduleStartDate,jdbcType=DATE},
+      schedule_end_date = #{scheduleEndDate,jdbcType=DATE},
+      real_start_time = #{realStartTime,jdbcType=TIMESTAMP},
+      real_end_time = #{realEndTime,jdbcType=TIMESTAMP},
+      status = #{status,jdbcType=TINYINT},
+      smallpic_url = #{smallpicUrl,jdbcType=VARCHAR},
+      brand_id = #{brandId,jdbcType=SMALLINT},
+      model_id = #{modelId,jdbcType=SMALLINT},
+      modelchild_id = #{modelchildId,jdbcType=SMALLINT},
+      nation = #{nation,jdbcType=TINYINT},
+      type = #{type,jdbcType=TINYINT},
+      type_ext = #{typeExt,jdbcType=TINYINT},
+      other_brand_name = #{otherBrandName,jdbcType=VARCHAR},
+      other_model_name = #{otherModelName,jdbcType=VARCHAR},
+      province_id = #{provinceId,jdbcType=CHAR},
+      zone_id = #{zoneId,jdbcType=SMALLINT},
+      markprovince_id = #{markprovinceId,jdbcType=CHAR},
+      markzone_id = #{markzoneId,jdbcType=SMALLINT},
+      buy_year = #{buyYear,jdbcType=SMALLINT},
+      buy_month = #{buyMonth,jdbcType=TINYINT},
+      buy_day = #{buyDay,jdbcType=TINYINT},
+      reg_year = #{regYear,jdbcType=SMALLINT},
+      reg_month = #{regMonth,jdbcType=TINYINT},
+      reg_day = #{regDay,jdbcType=TINYINT},
+      dealzone_id = #{dealzoneId,jdbcType=SMALLINT},
+      validdays = #{validdays,jdbcType=INTEGER},
+      gearbox = #{gearbox,jdbcType=TINYINT},
+      air = #{air,jdbcType=TINYINT},
+      cylinder = #{cylinder,jdbcType=TINYINT},
+      seating = #{seating,jdbcType=SMALLINT},
+      loads = #{loads,jdbcType=VARCHAR},
+      airdisplacement = #{airdisplacement,jdbcType=VARCHAR},
+      qhcp = #{qhcp,jdbcType=TINYINT},
+      driving_license = #{drivingLicense,jdbcType=TINYINT},
+      invoice = #{invoice,jdbcType=TINYINT},
+      surtax = #{surtax,jdbcType=TINYINT},
+      roadtoll_year = #{roadtollYear,jdbcType=SMALLINT},
+      roadtoll_month = #{roadtollMonth,jdbcType=TINYINT},
+      usetax_year = #{usetaxYear,jdbcType=SMALLINT},
+      usetax_month = #{usetaxMonth,jdbcType=TINYINT},
+      insurance_year = #{insuranceYear,jdbcType=SMALLINT},
+      insurance_month = #{insuranceMonth,jdbcType=TINYINT},
+      mot_year = #{motYear,jdbcType=SMALLINT},
+      mot_month = #{motMonth,jdbcType=TINYINT},
+      instalment = #{instalment,jdbcType=TINYINT},
+      config = #{config,jdbcType=VARCHAR},
+      color = #{color,jdbcType=TINYINT},
+      colour = #{colour,jdbcType=VARCHAR},
+      distance = #{distance,jdbcType=INTEGER},
+      registration_mark = #{registrationMark,jdbcType=TINYINT},
+      price = #{price,jdbcType=INTEGER},
+      contactman = #{contactman,jdbcType=VARCHAR},
+      telephone = #{telephone,jdbcType=VARCHAR},
+      collector_admin_id = #{collectorAdminId,jdbcType=VARCHAR},
+      record_time = #{recordTime,jdbcType=TIMESTAMP},
+      status_admin_id = #{statusAdminId,jdbcType=VARCHAR},
+      status_time = #{statusTime,jdbcType=TIMESTAMP},
+      company_branch_id = #{companyBranchId,jdbcType=TINYINT},
+      collection_id = #{collectionId,jdbcType=VARCHAR},
+      license_number = #{licenseNumber,jdbcType=VARCHAR},
+      combo = #{combo,jdbcType=TINYINT},
+      level = #{level,jdbcType=TINYINT},
+      priority = #{priority,jdbcType=TINYINT},
+      vin = #{vin,jdbcType=VARCHAR},
+      rank = #{rank,jdbcType=INTEGER},
+      vehicle_condition = #{vehicleCondition,jdbcType=INTEGER},
+      vctypebelong = #{vctypebelong,jdbcType=INTEGER},
+      rb_makecode = #{rbMakecode,jdbcType=VARCHAR},
+      rb_family = #{rbFamily,jdbcType=VARCHAR},
+      rb_year = #{rbYear,jdbcType=VARCHAR},
+      rb_vehiclekey = #{rbVehiclekey,jdbcType=VARCHAR},
+      qa = #{qa,jdbcType=VARCHAR},
+      authcode = #{authcode,jdbcType=VARCHAR},
+      isqa = #{isqa,jdbcType=INTEGER},
+      qasn = #{qasn,jdbcType=VARCHAR},
+      pay_way = #{payWay,jdbcType=TINYINT},
+      price_type = #{priceType,jdbcType=TINYINT},
+      is_crest = #{isCrest,jdbcType=TINYINT},
+      crest_create_time = #{crestCreateTime,jdbcType=TIMESTAMP},
+      crest_start_time = #{crestStartTime,jdbcType=TIMESTAMP},
+      crest_end_time = #{crestEndTime,jdbcType=TIMESTAMP},
+      crest_status = #{crestStatus,jdbcType=TINYINT},
+      has_background = #{hasBackground,jdbcType=TINYINT},
+      background_create_time = #{backgroundCreateTime,jdbcType=TIMESTAMP},
+      background_start_time = #{backgroundStartTime,jdbcType=TIMESTAMP},
+      background_end_time = #{backgroundEndTime,jdbcType=TIMESTAMP},
+      background_status = #{backgroundStatus,jdbcType=TINYINT},
+      promotion_state = #{promotionState,jdbcType=INTEGER},
+      consume_status = #{consumeStatus,jdbcType=TINYINT},
+      category = #{category,jdbcType=VARCHAR},
+      fuel_type = #{fuelType,jdbcType=INTEGER},
+      inner_color = #{innerColor,jdbcType=INTEGER},
+      engine_size = #{engineSize,jdbcType=INTEGER},
+      md5code = #{md5code,jdbcType=CHAR},
+      brand = #{brand,jdbcType=VARCHAR},
+      county_id = #{countyId,jdbcType=SMALLINT},
+      markcounty_id = #{markcountyId,jdbcType=SMALLINT},
+      sex = #{sex,jdbcType=INTEGER},
+      email = #{email,jdbcType=VARCHAR},
+      usages = #{usages,jdbcType=INTEGER},
+      repair_recorder = #{repairRecorder,jdbcType=TINYINT},
+      credit = #{credit,jdbcType=BIT},
+      score = #{score,jdbcType=SMALLINT},
+      iscore = #{iscore,jdbcType=INTEGER},
+      transfer = #{transfer,jdbcType=TINYINT},
+      service = #{service,jdbcType=VARCHAR},
+      substatus = #{substatus,jdbcType=TINYINT},
+      bargains_status = #{bargainsStatus,jdbcType=TINYINT},
+      body_style = #{bodyStyle,jdbcType=TINYINT},
+      drive_type = #{driveType,jdbcType=TINYINT},
+      badge = #{badge,jdbcType=VARCHAR},
+      make_year = #{makeYear,jdbcType=SMALLINT},
+      service_count = #{serviceCount,jdbcType=TINYINT},
+      selling_point = #{sellingPoint,jdbcType=VARCHAR},
+      emission_standard_id = #{emissionStandardId,jdbcType=TINYINT},
+      servicebit = #{servicebit,jdbcType=INTEGER},
+      sales_id = #{salesId,jdbcType=INTEGER},
+      custom_code = #{customCode,jdbcType=VARCHAR},
+      picture_urls = #{pictureUrls,jdbcType=LONGVARCHAR},
+      description = #{description,jdbcType=LONGVARCHAR},
+      invoice_number = #{invoiceNumber,jdbcType=LONGVARCHAR}
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.jiuxing.drm.model.VehicleOrderAdTmp" >
+    update vehicle_order_ad_tmp
+    set ad_id = #{adId,jdbcType=INTEGER},
+      order_id = #{orderId,jdbcType=VARCHAR},
+      ad_type = #{adType,jdbcType=TINYINT},
+      user_id = #{userId,jdbcType=INTEGER},
+      admin_id = #{adminId,jdbcType=VARCHAR},
+      schedule_start_date = #{scheduleStartDate,jdbcType=DATE},
+      schedule_end_date = #{scheduleEndDate,jdbcType=DATE},
+      real_start_time = #{realStartTime,jdbcType=TIMESTAMP},
+      real_end_time = #{realEndTime,jdbcType=TIMESTAMP},
+      status = #{status,jdbcType=TINYINT},
+      smallpic_url = #{smallpicUrl,jdbcType=VARCHAR},
+      brand_id = #{brandId,jdbcType=SMALLINT},
+      model_id = #{modelId,jdbcType=SMALLINT},
+      modelchild_id = #{modelchildId,jdbcType=SMALLINT},
+      nation = #{nation,jdbcType=TINYINT},
+      type = #{type,jdbcType=TINYINT},
+      type_ext = #{typeExt,jdbcType=TINYINT},
+      other_brand_name = #{otherBrandName,jdbcType=VARCHAR},
+      other_model_name = #{otherModelName,jdbcType=VARCHAR},
+      province_id = #{provinceId,jdbcType=CHAR},
+      zone_id = #{zoneId,jdbcType=SMALLINT},
+      markprovince_id = #{markprovinceId,jdbcType=CHAR},
+      markzone_id = #{markzoneId,jdbcType=SMALLINT},
+      buy_year = #{buyYear,jdbcType=SMALLINT},
+      buy_month = #{buyMonth,jdbcType=TINYINT},
+      buy_day = #{buyDay,jdbcType=TINYINT},
+      reg_year = #{regYear,jdbcType=SMALLINT},
+      reg_month = #{regMonth,jdbcType=TINYINT},
+      reg_day = #{regDay,jdbcType=TINYINT},
+      dealzone_id = #{dealzoneId,jdbcType=SMALLINT},
+      validdays = #{validdays,jdbcType=INTEGER},
+      gearbox = #{gearbox,jdbcType=TINYINT},
+      air = #{air,jdbcType=TINYINT},
+      cylinder = #{cylinder,jdbcType=TINYINT},
+      seating = #{seating,jdbcType=SMALLINT},
+      loads = #{loads,jdbcType=VARCHAR},
+      airdisplacement = #{airdisplacement,jdbcType=VARCHAR},
+      qhcp = #{qhcp,jdbcType=TINYINT},
+      driving_license = #{drivingLicense,jdbcType=TINYINT},
+      invoice = #{invoice,jdbcType=TINYINT},
+      surtax = #{surtax,jdbcType=TINYINT},
+      roadtoll_year = #{roadtollYear,jdbcType=SMALLINT},
+      roadtoll_month = #{roadtollMonth,jdbcType=TINYINT},
+      usetax_year = #{usetaxYear,jdbcType=SMALLINT},
+      usetax_month = #{usetaxMonth,jdbcType=TINYINT},
+      insurance_year = #{insuranceYear,jdbcType=SMALLINT},
+      insurance_month = #{insuranceMonth,jdbcType=TINYINT},
+      mot_year = #{motYear,jdbcType=SMALLINT},
+      mot_month = #{motMonth,jdbcType=TINYINT},
+      instalment = #{instalment,jdbcType=TINYINT},
+      config = #{config,jdbcType=VARCHAR},
+      color = #{color,jdbcType=TINYINT},
+      colour = #{colour,jdbcType=VARCHAR},
+      distance = #{distance,jdbcType=INTEGER},
+      registration_mark = #{registrationMark,jdbcType=TINYINT},
+      price = #{price,jdbcType=INTEGER},
+      contactman = #{contactman,jdbcType=VARCHAR},
+      telephone = #{telephone,jdbcType=VARCHAR},
+      collector_admin_id = #{collectorAdminId,jdbcType=VARCHAR},
+      record_time = #{recordTime,jdbcType=TIMESTAMP},
+      status_admin_id = #{statusAdminId,jdbcType=VARCHAR},
+      status_time = #{statusTime,jdbcType=TIMESTAMP},
+      company_branch_id = #{companyBranchId,jdbcType=TINYINT},
+      collection_id = #{collectionId,jdbcType=VARCHAR},
+      license_number = #{licenseNumber,jdbcType=VARCHAR},
+      combo = #{combo,jdbcType=TINYINT},
+      level = #{level,jdbcType=TINYINT},
+      priority = #{priority,jdbcType=TINYINT},
+      vin = #{vin,jdbcType=VARCHAR},
+      rank = #{rank,jdbcType=INTEGER},
+      vehicle_condition = #{vehicleCondition,jdbcType=INTEGER},
+      vctypebelong = #{vctypebelong,jdbcType=INTEGER},
+      rb_makecode = #{rbMakecode,jdbcType=VARCHAR},
+      rb_family = #{rbFamily,jdbcType=VARCHAR},
+      rb_year = #{rbYear,jdbcType=VARCHAR},
+      rb_vehiclekey = #{rbVehiclekey,jdbcType=VARCHAR},
+      qa = #{qa,jdbcType=VARCHAR},
+      authcode = #{authcode,jdbcType=VARCHAR},
+      isqa = #{isqa,jdbcType=INTEGER},
+      qasn = #{qasn,jdbcType=VARCHAR},
+      pay_way = #{payWay,jdbcType=TINYINT},
+      price_type = #{priceType,jdbcType=TINYINT},
+      is_crest = #{isCrest,jdbcType=TINYINT},
+      crest_create_time = #{crestCreateTime,jdbcType=TIMESTAMP},
+      crest_start_time = #{crestStartTime,jdbcType=TIMESTAMP},
+      crest_end_time = #{crestEndTime,jdbcType=TIMESTAMP},
+      crest_status = #{crestStatus,jdbcType=TINYINT},
+      has_background = #{hasBackground,jdbcType=TINYINT},
+      background_create_time = #{backgroundCreateTime,jdbcType=TIMESTAMP},
+      background_start_time = #{backgroundStartTime,jdbcType=TIMESTAMP},
+      background_end_time = #{backgroundEndTime,jdbcType=TIMESTAMP},
+      background_status = #{backgroundStatus,jdbcType=TINYINT},
+      promotion_state = #{promotionState,jdbcType=INTEGER},
+      consume_status = #{consumeStatus,jdbcType=TINYINT},
+      category = #{category,jdbcType=VARCHAR},
+      fuel_type = #{fuelType,jdbcType=INTEGER},
+      inner_color = #{innerColor,jdbcType=INTEGER},
+      engine_size = #{engineSize,jdbcType=INTEGER},
+      md5code = #{md5code,jdbcType=CHAR},
+      brand = #{brand,jdbcType=VARCHAR},
+      county_id = #{countyId,jdbcType=SMALLINT},
+      markcounty_id = #{markcountyId,jdbcType=SMALLINT},
+      sex = #{sex,jdbcType=INTEGER},
+      email = #{email,jdbcType=VARCHAR},
+      usages = #{usages,jdbcType=INTEGER},
+      repair_recorder = #{repairRecorder,jdbcType=TINYINT},
+      credit = #{credit,jdbcType=BIT},
+      score = #{score,jdbcType=SMALLINT},
+      iscore = #{iscore,jdbcType=INTEGER},
+      transfer = #{transfer,jdbcType=TINYINT},
+      service = #{service,jdbcType=VARCHAR},
+      substatus = #{substatus,jdbcType=TINYINT},
+      bargains_status = #{bargainsStatus,jdbcType=TINYINT},
+      body_style = #{bodyStyle,jdbcType=TINYINT},
+      drive_type = #{driveType,jdbcType=TINYINT},
+      badge = #{badge,jdbcType=VARCHAR},
+      make_year = #{makeYear,jdbcType=SMALLINT},
+      service_count = #{serviceCount,jdbcType=TINYINT},
+      selling_point = #{sellingPoint,jdbcType=VARCHAR},
+      emission_standard_id = #{emissionStandardId,jdbcType=TINYINT},
+      servicebit = #{servicebit,jdbcType=INTEGER},
+      sales_id = #{salesId,jdbcType=INTEGER},
+      custom_code = #{customCode,jdbcType=VARCHAR}
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+  <cache />
+</mapper>
